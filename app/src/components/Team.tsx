@@ -79,16 +79,16 @@ export function Team() {
 }
 
 function PersonGrid({ people }: { people: Person[] }) {
-  // Cards share one frame; on sm+ each card is a 4-row subgrid (avatar, name+role, text, facts),
-  // so names, roles and texts start on the same line across a row whatever their length.
+  // On sm+ each card is a 3-row subgrid (avatar, name+role, text), so names, roles and
+  // texts start on the same line across a row whatever their length. No frames.
   return (
-    <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+    <ul className="grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
       {people.map((p, i) => (
         <Reveal
           as="li"
           key={p.name}
           delay={(i % 4) * 0.06}
-          className="group grid grid-cols-[auto_1fr] gap-x-5 gap-y-3 rounded-[4px] border border-line bg-white/60 p-6 sm:row-span-4 sm:grid-cols-1 sm:grid-rows-subgrid sm:gap-y-4"
+          className="group grid grid-cols-[auto_1fr] gap-x-5 gap-y-3 sm:row-span-3 sm:grid-cols-1 sm:grid-rows-subgrid sm:gap-y-4"
         >
           <div className="transition-transform duration-500 ease-out-soft group-hover:-translate-y-1">
             <Avatar person={p} />
@@ -99,18 +99,6 @@ function PersonGrid({ people }: { people: Person[] }) {
             {p.tag && <p className="text-sm text-solder-ink">{p.tag}</p>}
           </div>
           <p className="col-span-2 text-pretty text-sm leading-relaxed text-graphite/75 sm:col-span-1">{p.line}</p>
-          <div className="col-span-2 sm:col-span-1">
-            {p.facts && (
-              <dl className="space-y-1 border-t border-line pt-3 text-sm leading-relaxed">
-                {p.facts.map((f) => (
-                  <div key={f.k}>
-                    <dt className="inline font-medium text-graphite">{f.k}: </dt>
-                    <dd className="inline text-graphite/75">{f.v}</dd>
-                  </div>
-                ))}
-              </dl>
-            )}
-          </div>
         </Reveal>
       ))}
     </ul>

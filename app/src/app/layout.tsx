@@ -1,5 +1,9 @@
 import type { Metadata, Viewport } from "next";
 import { Archivo, Inter } from "next/font/google";
+import { MotionConfig } from "motion/react";
+import { Footer } from "@/components/Footer";
+import { Nav } from "@/components/Nav";
+import { StatusBar } from "@/components/StatusBar";
 import "./globals.css";
 
 const archivo = Archivo({ variable: "--font-archivo", subsets: ["latin"], axes: ["wdth"] });
@@ -24,7 +28,14 @@ export const viewport: Viewport = { themeColor: "#F6F5F2" };
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="de-CH" className={`${archivo.variable} ${inter.variable} antialiased`}>
-      <body>{children}</body>
+      <body>
+        <MotionConfig reducedMotion="user">
+          <StatusBar />
+          <Nav />
+          {children}
+          <Footer />
+        </MotionConfig>
+      </body>
     </html>
   );
 }

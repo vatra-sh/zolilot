@@ -9,12 +9,12 @@ export const company = {
 };
 
 export const nav = [
-  { label: "Leistungen", href: "#leistungen" },
-  { label: "Prozess", href: "#prozess" },
-  { label: "Über uns", href: "#ueber-uns" },
-  { label: "Team", href: "#team" },
-  { label: "Referenzen", href: "#referenzen" },
-  { label: "Karriere", href: "#karriere" },
+  { label: "Leistungen", href: "/#leistungen" },
+  { label: "Prozess", href: "/#prozess" },
+  { label: "Über uns", href: "/#ueber-uns" },
+  { label: "Team", href: "/#team" },
+  { label: "News", href: "/news" },
+  { label: "Karriere", href: "/#karriere" },
 ];
 
 export const hero = {
@@ -131,7 +131,6 @@ export type Person = {
   tag?: string;
   ring?: string;
   ringColor?: string;
-  facts?: { k: string; v: string }[];
   bg: string;
   avatar: Record<string, unknown>;
 };
@@ -195,11 +194,6 @@ export const team: {
       line: "Prüft jede Offerte und jede Folie von Maurice. Hat den Slogan «Wir machens möglich» dreimal rot angestrichen. Wir haben ihn trotzdem behalten. Sie hat Bedenken angemeldet.",
       bg: "#efdcd6",
       avatar: { hair: ["variant23"], body: ["variant15"], gesture: ["point"], glassesProbability: 0, beardProbability: 0 },
-      facts: [
-        { k: "Löt-Erbe", v: "Ihre Mutter hat schon gelötet." },
-        { k: "Frauenquote", v: "Seit ihr von 0 % auf 7 %. Laut Marwin sein Verdienst." },
-        { k: "Honorar", v: "In korrekt gesetzten Kommas." },
-      ],
     },
   ],
   staff: [

@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "motion/react";
 import { useState } from "react";
 import { nav } from "@/content";
@@ -18,31 +19,31 @@ export function Nav() {
       }`}
     >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-7 md:px-8">
-        <a href="#top" aria-label="Zolilöt AG, zur Startseite" className="shrink-0">
+        <Link href="/" aria-label="Zolilöt AG, zur Startseite" className="shrink-0">
           <Image src="/logo.png" alt="Zolilöt AG" width={1321} height={399} preload className="h-9 w-auto md:h-10" />
-        </a>
+        </Link>
 
         <nav aria-label="Hauptnavigation" className="hidden items-center gap-8 lg:flex">
           {nav.map((l) => (
-            <a
+            <Link
               key={l.href}
               href={l.href}
               className="relative text-sm text-graphite/80 transition-colors duration-300 hover:text-graphite after:absolute after:-bottom-1 after:left-0 after:h-px after:w-full after:origin-left after:scale-x-0 after:bg-solder after:transition-transform after:duration-300 hover:after:scale-x-100"
             >
               {l.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
         <div className="flex items-center gap-3">
-          <a
-            href="#kontakt"
+          <Link
+            href="/#kontakt"
             className="group h-10 items-center gap-2.5 rounded-[3px] bg-graphite pl-4 pr-3.5 text-sm font-medium text-paper shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] transition-colors duration-300 hover:bg-ink inline-flex"
           >
             <span className="sm:hidden">Offerte</span>
             <span className="hidden sm:inline">Offerte anfragen</span>
             <span aria-hidden className="size-1.5 bg-solder transition-transform duration-500 ease-out-soft group-hover:rotate-45" />
-          </a>
+          </Link>
           <button
             type="button"
             aria-expanded={open}
@@ -79,16 +80,16 @@ export function Nav() {
             className="overflow-hidden border-t border-line lg:hidden"
           >
             <ul className="mx-auto max-w-6xl px-7 py-4 md:px-8">
-              {[...nav, { label: "Kontakt", href: "#kontakt" }].map((l) => (
+              {[...nav, { label: "Kontakt", href: "/#kontakt" }].map((l) => (
                 <li key={l.href}>
-                  <a
+                  <Link
                     href={l.href}
                     onClick={() => setOpen(false)}
                     className="font-display flex items-center justify-between border-b border-line py-3.5 text-lg font-medium text-graphite last:border-0"
                   >
                     {l.label}
                     <span aria-hidden className="text-solder">→</span>
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
