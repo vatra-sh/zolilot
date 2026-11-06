@@ -1,7 +1,8 @@
-import { team } from "@/content";
+import { team, type Person } from "@/content";
 import { Avatar } from "./Avatar";
 import { Reveal } from "./Reveal";
 import { SectionHead } from "./SectionHead";
+import { TeamTabs } from "./TeamTabs";
 
 export function Team() {
   return (
@@ -52,68 +53,64 @@ export function Team() {
           ))}
         </ul>
 
-        <p className="mt-16 text-xs font-semibold uppercase tracking-[0.14em] text-steel">{team.advisor.label}</p>
-        <Reveal className="mt-5">
-          <article className="group grid gap-8 rounded-[4px] border border-line bg-white/60 p-7 md:grid-cols-12 md:gap-10 md:p-9">
-            <div className="flex flex-col items-start gap-5 sm:flex-row sm:items-center md:col-span-5 md:flex-col md:items-start">
-              <div className="transition-transform duration-500 ease-out-soft group-hover:-translate-y-1">
-                <Avatar person={team.advisor} size="lg" />
-              </div>
-              <div>
-                <h3 className="font-display text-2xl font-semibold tracking-tight text-graphite">{team.advisor.name}</h3>
-                <p className="mt-1 text-sm text-steel">{team.advisor.role}</p>
-                <p className="mt-1 text-sm text-solder-ink">{team.advisor.tag}</p>
-              </div>
-            </div>
-            <div className="md:col-span-7">
-              <p className="text-pretty text-[15px] leading-relaxed text-graphite/80">{team.advisor.line}</p>
-              <dl className="mt-6 border-t border-line">
-                {team.advisor.facts.map((f) => (
-                  <div key={f.k} className="grid gap-1 border-b border-line py-3.5 sm:grid-cols-[8rem_1fr] sm:gap-6">
-                    <dt className="text-xs font-semibold uppercase tracking-[0.14em] text-steel sm:pt-0.5">{f.k}</dt>
-                    <dd className="text-[15px] leading-relaxed text-graphite/85">{f.v}</dd>
+        <div className="mt-16">
+          <TeamTabs
+            tabs={[
+              {
+                id: "staff",
+                label: team.tabs.staff.label,
+                count: team.staff.length,
+                intro: team.tabs.staff.intro,
+                panel: <PersonGrid people={team.staff} />,
+              },
+              {
+                id: "advisors",
+                label: team.tabs.advisors.label,
+                count: team.advisors.length,
+                intro: team.tabs.advisors.intro,
+                panel: <PersonGrid people={team.advisors} />,
+              },
+            ]}
+          />
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function PersonGrid({ people }: { people: Person[] }) {
+  return (
+    <ul className="grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
+      {people.map((p, i) => (
+        <Reveal as="li" key={p.name} delay={(i % 4) * 0.06} className="group flex gap-5 sm:block">
+          <div className="transition-transform duration-500 ease-out-soft group-hover:-translate-y-1">
+            <Avatar person={p} />
+          </div>
+          <div>
+            <h3 className="font-display mt-1 text-lg font-semibold tracking-tight text-graphite sm:mt-5">{p.name}</h3>
+            <p className="text-sm text-steel">
+              {p.role}
+              {p.tag && (
+                <>
+                  {" · "}
+                  <span className="text-solder-ink">{p.tag}</span>
+                </>
+              )}
+            </p>
+            <p className="mt-3 text-pretty text-sm leading-relaxed text-graphite/75">{p.line}</p>
+            {p.facts && (
+              <dl className="mt-3 space-y-1 text-sm leading-relaxed">
+                {p.facts.map((f) => (
+                  <div key={f.k}>
+                    <dt className="inline font-medium text-graphite">{f.k}: </dt>
+                    <dd className="inline text-graphite/75">{f.v}</dd>
                   </div>
                 ))}
               </dl>
-            </div>
-          </article>
+            )}
+          </div>
         </Reveal>
-
-        <p className="mt-16 text-xs font-semibold uppercase tracking-[0.14em] text-steel">
-          Mitarbeitende
-        </p>
-        <ul className="mt-5 grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
-          {team.staff.map((p, i) => (
-            <Reveal
-              as="li"
-              key={p.name}
-              delay={(i % 4) * 0.06}
-              className="group flex gap-5 sm:block"
-            >
-              <div className="transition-transform duration-500 ease-out-soft group-hover:-translate-y-1">
-                <Avatar person={p} />
-              </div>
-              <div>
-                <h3 className="font-display mt-1 text-lg sm:mt-5 font-semibold tracking-tight text-graphite">
-                  {p.name}
-                </h3>
-                <p className="text-sm text-steel">
-                  {p.role}
-                  {p.tag && (
-                    <>
-                      {" · "}
-                      <span className="text-solder-ink">{p.tag}</span>
-                    </>
-                  )}
-                </p>
-                <p className="mt-3 text-pretty text-sm leading-relaxed text-graphite/75">
-                  {p.line}
-                </p>
-              </div>
-            </Reveal>
-          ))}
-        </ul>
-      </div>
-    </section>
+      ))}
+    </ul>
   );
 }
