@@ -35,7 +35,7 @@ export const press = {
 export const stats = [
   { value: 360, suffix: " °C", label: "Betriebstemperatur", note: "konstant, ausser wenn jemand am Kabel zieht" },
   { value: 0, suffix: "", label: "Kalte Lötstellen", note: "die wir zugeben" },
-  { value: 14, suffix: "", label: "Mitarbeitende", note: "davon 2 Besitzer und 1 CEO" },
+  { value: 18, suffix: "", label: "Mitarbeitende", note: "davon 2 Besitzer und 1 CEO" },
   { value: 24, suffix: "/7", label: "Erreichbar", note: "ausser während der Schule" },
 ];
 
@@ -101,7 +101,7 @@ export const about = {
   story: [
     "Zoltán hatte die Idee, den Namen und den Lötkolben. Dijar hatte alles andere: die Domain, den Server, das WLAN-Passwort und als Einziger Zugriff auf das Aktienregister.",
     "Das Aktienregister ist eine Excel-Datei auf Dijars Laptop. An einem Dienstagnachmittag hat er sie aktualisiert, seither besitzt er 49 %. Julius war zufällig im Raum, sagte «ich auch» und besitzt seither ebenfalls 49 %. Zoltán bekam den Rest.",
-    "Heute beschäftigt die Zolilöt AG vierzehn Mitarbeitende, vom Lehrling über den Chemiker bis zur Lehrerin. Gelötet wird hauptsächlich von Joël.",
+    "Heute beschäftigt die Zolilöt AG achtzehn Mitarbeitende, vom Lehrling über den Chemiker bis zur Lehrerin. Gelötet wird hauptsächlich von Joël.",
   ],
   quote: "Ich bin der CEO. Das steht so im Handelsregister.",
   quoteBy: "Zoltán, CEO, 2 % Aktien",
@@ -147,7 +147,7 @@ export const team: {
 } = {
   eyebrow: "Team",
   title: "Die Köpfe hinter der Lötstelle.",
-  lead: "Vierzehn Personen, ein Labor, ein Lötkolben und einer, der ihn zähmt. Jede Rolle ist besetzt, manche schon seit sechs Lehrjahren.",
+  lead: "Achtzehn Personen, ein Labor, ein Erste-Hilfe-Team, ein Lötkolben und einer, der ihn zähmt. Jede Rolle ist besetzt, manche schon seit sechs Lehrjahren.",
   board: [
     {
       name: "Dijar",
@@ -222,11 +222,38 @@ export const team: {
       avatar: { hair: ["variant42"], body: ["variant07"], gestureProbability: 0, glasses: ["variant08"], glassesProbability: 100, beardProbability: 0 },
     },
     {
+      name: "Violetta",
+      role: "Erste Hilfe bei Lötunfällen",
+      ring: "#ERSTE HILFE",
+      ringColor: "#2e7d4f",
+      tag: "Erste-Hilfe-Team",
+      line: "Bildet mit Johanna das Erste-Hilfe-Team. Seit ihrem Eintritt hat Cedric 14 Pflaster verbraucht und Philippe sich dreimal am Türrahmen gestossen. Beides war absehbar.",
+      bg: "#dfe9e2",
+      avatar: { hair: ["variant39"], body: ["variant22"], gesture: ["ok"], glassesProbability: 0, beardProbability: 0 },
+    },
+    {
+      name: "Johanna",
+      role: "Erste Hilfe bei Lötunfällen",
+      ring: "#ERSTE HILFE",
+      ringColor: "#2e7d4f",
+      tag: "Erste-Hilfe-Team",
+      line: "Die andere Hälfte des Erste-Hilfe-Teams. Führt das Unfallbuch. Häufigster Eintrag: «Am heissen Ende angefasst.» Von Damon gibt es noch keinen einzigen.",
+      bg: "#e3ece6",
+      avatar: { hair: ["variant28"], body: ["variant14"], gesture: ["hand"], glassesProbability: 0, beardProbability: 0 },
+    },
+    {
       name: "Deniz",
       role: "Projektleiter",
       line: "Leitet sämtliche Projekte. Welche das sind, ist aktuell noch in Abklärung.",
       bg: "#ebe4d6",
       avatar: { hair: ["variant21"], body: ["variant05"], gesture: ["pointLongArm"], glasses: ["variant03"], glassesProbability: 100, beardProbability: 0 },
+    },
+    {
+      name: "Aisha",
+      role: "Finanzen",
+      line: "Verantwortet die Finanzen. Sie hat das Firmenkonto, Dijar hat das Passwort. Hat als Einzige nachgerechnet, ob 49 plus 49 plus 2 wirklich 100 ergibt. Es war knapp.",
+      bg: "#ece6d6",
+      avatar: { hair: ["variant41"], body: ["variant05"], gesture: ["point"], glasses: ["variant11"], glassesProbability: 100, beardProbability: 0 },
     },
     {
       name: "Levi",
@@ -264,6 +291,7 @@ export const team: {
       name: "Linus",
       role: "Aussendienst & Verkauf",
       ring: "#OFFEN FÜR DEALS",
+      tag: "aka «Hakan»",
       line: "Verkauft alles. Auch Dinge, die wir gar nicht anbieten. Besonders die.",
       bg: "#dbe4e6",
       avatar: { hair: ["variant52"], body: ["variant04"], gesture: ["handPhone"], glasses: ["variant07"], glassesProbability: 100, beardProbability: 0 },
@@ -275,6 +303,13 @@ export const team: {
       line: "Zuständig für alle Mitarbeitenden. Ausser für die zwei mit 49 %. Für die ist niemand zuständig.",
       bg: "#e9e2dc",
       avatar: { hair: ["variant01"], body: ["variant13"], gesture: ["waveLongArm"], glassesProbability: 0, beard: ["variant05"], beardProbability: 100 },
+    },
+    {
+      name: "Engjelina",
+      role: "HR, Lehrling 1. Lehrjahr",
+      line: "Lernt HR bei Marwin. Hat in der ersten Woche alle Personalakten sortiert, auch die von Philippe. Die füllt drei Ordner.",
+      bg: "#efe2e8",
+      avatar: { hair: ["variant46"], body: ["variant24"], gesture: ["waveLongArm"], glassesProbability: 0, beardProbability: 0 },
     },
   ],
 };
@@ -315,7 +350,7 @@ export const testimonials = {
 export const career = {
   eyebrow: "Karriere",
   title: "Werde Teil des Teams.",
-  lead: "Vierzehn Leute, zwei Besitzer, ein Lötkolben. Für Nummer fünfzehn ist noch Platz.",
+  lead: "Achtzehn Leute, zwei Besitzer, ein Lötkolben. Für Nummer neunzehn ist noch Platz.",
   job: {
     title: "Lötlehrling (m/w/d) 100 %",
     meta: ["Aarau, Keller", "ab sofort", "unbefristet"],
