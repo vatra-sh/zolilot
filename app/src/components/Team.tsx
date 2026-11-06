@@ -79,27 +79,29 @@ export function Team() {
 }
 
 function PersonGrid({ people }: { people: Person[] }) {
+  // Cards share one frame; on sm+ each card is a 4-row subgrid (avatar, name+role, text, facts),
+  // so names, roles and texts start on the same line across a row whatever their length.
   return (
-    <ul className="grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
+    <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
       {people.map((p, i) => (
-        <Reveal as="li" key={p.name} delay={(i % 4) * 0.06} className="group flex gap-5 sm:block">
+        <Reveal
+          as="li"
+          key={p.name}
+          delay={(i % 4) * 0.06}
+          className="group grid grid-cols-[auto_1fr] gap-x-5 gap-y-3 rounded-[4px] border border-line bg-white/60 p-6 sm:row-span-4 sm:grid-cols-1 sm:grid-rows-subgrid sm:gap-y-4"
+        >
           <div className="transition-transform duration-500 ease-out-soft group-hover:-translate-y-1">
             <Avatar person={p} />
           </div>
-          <div>
-            <h3 className="font-display mt-1 text-lg font-semibold tracking-tight text-graphite sm:mt-5">{p.name}</h3>
-            <p className="text-sm text-steel">
-              {p.role}
-              {p.tag && (
-                <>
-                  {" · "}
-                  <span className="text-solder-ink">{p.tag}</span>
-                </>
-              )}
-            </p>
-            <p className="mt-3 text-pretty text-sm leading-relaxed text-graphite/75">{p.line}</p>
+          <div className="self-center sm:self-start">
+            <h3 className="font-display text-lg font-semibold tracking-tight text-graphite">{p.name}</h3>
+            <p className="mt-0.5 text-sm text-steel">{p.role}</p>
+            {p.tag && <p className="text-sm text-solder-ink">{p.tag}</p>}
+          </div>
+          <p className="col-span-2 text-pretty text-sm leading-relaxed text-graphite/75 sm:col-span-1">{p.line}</p>
+          <div className="col-span-2 sm:col-span-1">
             {p.facts && (
-              <dl className="mt-3 space-y-1 text-sm leading-relaxed">
+              <dl className="space-y-1 border-t border-line pt-3 text-sm leading-relaxed">
                 {p.facts.map((f) => (
                   <div key={f.k}>
                     <dt className="inline font-medium text-graphite">{f.k}: </dt>
