@@ -187,7 +187,7 @@ export const team: {
   advisors: [
     {
       name: "Frau Deubelbeiss",
-      role: "Beraterin Sprache & Kommunikation",
+      role: "Head of Global Affairs, Kommunikation & Sprache",
       ring: "#BITTE ÜBERARBEITEN",
       ringColor: "#d62828",
       tag: "Erste Frau bei der Zolilöt AG",

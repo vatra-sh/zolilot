@@ -24,12 +24,12 @@ export const posts: Post[] = [
     slug: "frau-deubelbeiss-beratung",
     date: "2026-11-06",
     category: "Personal",
-    title: "Frau Deubelbeiss verstärkt die Zolilöt AG als Beraterin",
-    excerpt: "Die erste Frau in der Geschichte des Unternehmens übernimmt Sprache und Kommunikation. Löten liegt bei ihr in der Familie.",
+    title: "Frau Deubelbeiss übernimmt Global Affairs, Kommunikation und Sprache",
+    excerpt: "Die erste Frau in der Geschichte des Unternehmens übernimmt Global Affairs, Kommunikation und Sprache. Löten liegt bei ihr in der Familie.",
     body: [
       {
         type: "p",
-        text: "Die Zolilöt AG freut sich, Frau Deubelbeiss als fest angestellte Beraterin für Sprache und Kommunikation begrüssen zu dürfen. Sie prüft ab sofort jede Offerte, jede E-Mail und jede Folie von Maurice, bevor sie das Haus verlässt. Offerten kommen bei ihr mit einer Note zurück.",
+        text: "Die Zolilöt AG freut sich, Frau Deubelbeiss als Head of Global Affairs, Kommunikation & Sprache begrüssen zu dürfen. Sie verantwortet ab sofort die internationalen Beziehungen der Firma (aktuell: keine) und prüft jede Offerte, jede E-Mail und jede Folie von Maurice, bevor sie das Haus verlässt. Offerten kommen bei ihr mit einer Note zurück.",
       },
       {
         type: "p",
