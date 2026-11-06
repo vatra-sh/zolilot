@@ -35,7 +35,7 @@ export const press = {
 export const stats = [
   { value: 360, suffix: " °C", label: "Betriebstemperatur", note: "konstant, ausser wenn jemand am Kabel zieht" },
   { value: 0, suffix: "", label: "Kalte Lötstellen", note: "die wir zugeben" },
-  { value: 13, suffix: "", label: "Mitarbeitende", note: "davon 2 Besitzer und 1 CEO" },
+  { value: 14, suffix: "", label: "Mitarbeitende", note: "davon 2 Besitzer und 1 CEO" },
   { value: 24, suffix: "/7", label: "Erreichbar", note: "ausser während der Schule" },
 ];
 
@@ -101,7 +101,7 @@ export const about = {
   story: [
     "Zoltán hatte die Idee, den Namen und den Lötkolben. Dijar hatte alles andere: die Domain, den Server, das WLAN-Passwort und als Einziger Zugriff auf das Aktienregister.",
     "Das Aktienregister ist eine Excel-Datei auf Dijars Laptop. An einem Dienstagnachmittag hat er sie aktualisiert, seither besitzt er 49 %. Julius war zufällig im Raum, sagte «ich auch» und besitzt seither ebenfalls 49 %. Zoltán bekam den Rest.",
-    "Heute beschäftigt die Zolilöt AG dreizehn Mitarbeitende, vom Lehrling bis zum Chemiker. Gelötet wird hauptsächlich von Joël.",
+    "Heute beschäftigt die Zolilöt AG vierzehn Mitarbeitende, vom Lehrling über den Chemiker bis zur Lehrerin. Gelötet wird hauptsächlich von Joël.",
   ],
   quote: "Ich bin der CEO. Das steht so im Handelsregister.",
   quoteBy: "Zoltán, CEO, 2 % Aktien",
@@ -147,7 +147,7 @@ export const team: {
 } = {
   eyebrow: "Team",
   title: "Die Köpfe hinter der Lötstelle.",
-  lead: "Dreizehn Personen, eine externe Beraterin, ein Labor, ein Lötkolben und einer, der ihn zähmt. Jede Rolle ist besetzt, manche schon seit sechs Lehrjahren.",
+  lead: "Vierzehn Personen, ein Labor, ein Lötkolben und einer, der ihn zähmt. Jede Rolle ist besetzt, manche schon seit sechs Lehrjahren.",
   board: [
     {
       name: "Dijar",
@@ -180,8 +180,8 @@ export const team: {
   tabs: {
     staff: { label: "Mitarbeitende", intro: "Die Leute, die bei uns arbeiten. Mehr oder weniger." },
     advisors: {
-      label: "Externe Beratung",
-      intro: "Lehrpersonen, die uns beraten. Sie helfen, sie arbeiten nicht. Das ist vertraglich so geregelt.",
+      label: "Lehrpersonen",
+      intro: "Bei uns fest angestellt, als Beraterinnen und Berater. Sie helfen, sie arbeiten nicht. Das ist vertraglich so geregelt.",
     },
   },
   advisors: [
@@ -315,7 +315,7 @@ export const testimonials = {
 export const career = {
   eyebrow: "Karriere",
   title: "Werde Teil des Teams.",
-  lead: "Dreizehn Leute, zwei Besitzer, ein Lötkolben. Für Nummer vierzehn ist noch Platz.",
+  lead: "Vierzehn Leute, zwei Besitzer, ein Lötkolben. Für Nummer fünfzehn ist noch Platz.",
   job: {
     title: "Lötlehrling (m/w/d) 100 %",
     meta: ["Aarau, Keller", "ab sofort", "unbefristet"],

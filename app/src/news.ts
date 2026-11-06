@@ -21,19 +21,19 @@ export const newsPage = {
 
 export const posts: Post[] = [
   {
-    slug: "frau-deubelbeiss-externe-beratung",
+    slug: "frau-deubelbeiss-beratung",
     date: "2026-11-06",
     category: "Personal",
-    title: "Frau Deubelbeiss verstärkt die Zolilöt AG als externe Beraterin",
+    title: "Frau Deubelbeiss verstärkt die Zolilöt AG als Beraterin",
     excerpt: "Die erste Frau in der Geschichte des Unternehmens übernimmt Sprache und Kommunikation. Löten liegt bei ihr in der Familie.",
     body: [
       {
         type: "p",
-        text: "Die Zolilöt AG freut sich, Frau Deubelbeiss als externe Beraterin für Sprache und Kommunikation begrüssen zu dürfen. Sie prüft ab sofort jede Offerte, jede E-Mail und jede Folie von Maurice, bevor sie das Haus verlässt. Offerten kommen bei ihr mit einer Note zurück.",
+        text: "Die Zolilöt AG freut sich, Frau Deubelbeiss als fest angestellte Beraterin für Sprache und Kommunikation begrüssen zu dürfen. Sie prüft ab sofort jede Offerte, jede E-Mail und jede Folie von Maurice, bevor sie das Haus verlässt. Offerten kommen bei ihr mit einer Note zurück.",
       },
       {
         type: "p",
-        text: "Damit ist Frau Deubelbeiss die erste Frau in der Geschichte der Zolilöt AG. Als Beraterin gehört sie zur Gruppe der Lehrpersonen, die uns unterstützen: Sie helfen, sie arbeiten nicht. Das ist vertraglich so geregelt.",
+        text: "Damit ist Frau Deubelbeiss die erste Frau in der Geschichte der Zolilöt AG. Als Beraterin gehört sie zur Gruppe der angestellten Lehrpersonen: Sie helfen, sie arbeiten nicht. Das ist vertraglich so geregelt.",
       },
       {
         type: "facts",
