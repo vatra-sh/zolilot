@@ -56,7 +56,18 @@ export function Footer() {
             <p>{footer.proofread}</p>
           </div>
         </div>
-        <p className="mt-2 text-xs text-steel md:text-right">{footer.legal}</p>
+        <div className="mt-2 flex flex-col gap-2 text-xs text-steel md:flex-row-reverse md:justify-between">
+          <p>{footer.legal}</p>
+          <a
+            href={footer.repo.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 text-graphite/80 underline decoration-line decoration-1 underline-offset-4 transition-colors duration-300 hover:text-graphite hover:decoration-solder"
+          >
+            {footer.repo.label}
+            <span aria-hidden>↗</span>
+          </a>
+        </div>
       </div>
     </footer>
   );

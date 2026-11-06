@@ -366,6 +366,7 @@ export const footer = {
   privacy: "Wir speichern keine Daten. Wir vergessen auch sonst vieles.",
   it: "Website, Server und Aktienregister betrieben von Dijar (CTO, 49 %).",
   proofread: "Lektorat: Frau Deubelbeiss. Alle verbleibenden Fehler gehören Dijar.",
+  repo: { label: "Quellcode auf GitHub", href: "https://github.com/vatra-sh/zolilot" },
 };
 
 export const shop = {
