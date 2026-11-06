@@ -8,7 +8,7 @@ const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Zolilöt AG · Wir machens möglich.",
   description:
-    "Löttechnik, Kabelkonfektion und Reparatur aus Aarau. Schweizer Qualität, von Hand gefertigt. Von einer Hand, um genau zu sein.",
+    "Löttechnik, Kabelkonfektion und Reparatur aus Aarau. Schweizer Qualität, von Hand gefertigt. Von Joël, um genau zu sein.",
   robots: { index: false, follow: false, googleBot: { index: false, follow: false } },
   openGraph: {
     title: "Zolilöt AG · Wir machens möglich.",

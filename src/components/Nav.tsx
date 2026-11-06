@@ -37,9 +37,10 @@ export function Nav() {
         <div className="flex items-center gap-3">
           <a
             href="#kontakt"
-            className="group hidden h-10 items-center gap-2.5 rounded-[3px] bg-graphite pl-4 pr-3.5 text-sm font-medium text-paper shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] transition-colors duration-300 hover:bg-ink sm:inline-flex"
+            className="group h-10 items-center gap-2.5 rounded-[3px] bg-graphite pl-4 pr-3.5 text-sm font-medium text-paper shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] transition-colors duration-300 hover:bg-ink inline-flex"
           >
-            Offerte anfragen
+            <span className="sm:hidden">Offerte</span>
+            <span className="hidden sm:inline">Offerte anfragen</span>
             <span aria-hidden className="size-1.5 bg-solder transition-transform duration-500 ease-out-soft group-hover:rotate-45" />
           </a>
           <button

@@ -22,9 +22,8 @@ export const hero = {
   title: ["Wir verbinden,", "was zusammen"],
   titleAccent: "gehört.",
   lead:
-    "Die Zolilöt AG ist Ihr Partner für Löttechnik, Kabelkonfektion und alles, was sonst noch irgendwie hält. Schweizer Qualität, von Hand gefertigt. Von einer Hand, um genau zu sein.",
-  primary: { label: "Offerte anfragen", href: "#kontakt" },
-  secondary: { label: "Leistungen ansehen", href: "#leistungen" },
+    "Die Zolilöt AG ist Ihr Partner für Löttechnik, Kabelkonfektion und alles, was sonst noch irgendwie hält. Schweizer Qualität, von Hand gefertigt. Von Joël, um genau zu sein.",
+  cta: { label: "Leistungen ansehen", href: "#leistungen" },
   meta: "Inhabergeführt seit 2026 · Aarau, Schweiz",
 };
 

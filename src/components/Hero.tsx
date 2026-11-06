@@ -53,10 +53,7 @@ export function Hero() {
           >
             <p className="max-w-xl text-pretty text-base leading-relaxed text-steel md:text-lg">{hero.lead}</p>
             <div className="mt-6 flex flex-wrap gap-3">
-              <ButtonLink href={hero.primary.href}>{hero.primary.label}</ButtonLink>
-              <ButtonLink href={hero.secondary.href} variant="ghost">
-                {hero.secondary.label}
-              </ButtonLink>
+              <ButtonLink href={hero.cta.href}>{hero.cta.label}</ButtonLink>
             </div>
           </motion.div>
         </div>
