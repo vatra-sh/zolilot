@@ -3,6 +3,7 @@
 import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useState, type FormEvent } from "react";
 import { contact } from "@/content";
+import { SubmitButton } from "./Button";
 import { TOPIC_EVENT } from "./Career";
 import { Reveal } from "./Reveal";
 import { SectionHead } from "./SectionHead";
@@ -10,7 +11,7 @@ import { SectionHead } from "./SectionHead";
 type Errors = Partial<Record<"name" | "email" | "message" | "consent", string>>;
 
 const field =
-  "mt-2 block w-full rounded-md border border-line bg-white/70 px-3.5 py-3 text-[15px] text-graphite outline-none transition-colors duration-300 placeholder:text-steel/60 focus:border-graphite/50 aria-[invalid=true]:border-solder-ink";
+  "mt-2 block w-full rounded-[3px] border border-line bg-white/70 px-3.5 py-3 text-[15px] text-graphite outline-none transition-colors duration-300 placeholder:text-steel/60 focus:border-graphite/50 aria-[invalid=true]:border-solder-ink";
 
 export function Contact() {
   const [topic, setTopic] = useState(contact.topics[0]);
@@ -111,11 +112,7 @@ export function Contact() {
                     </div>
                     <div className="flex items-center justify-between gap-4 sm:col-span-2">
                       <p className="font-medium text-[11px] text-steel">Antwortzeit: 1 bis 365 Werktage</p>
-                      <button
-                        type="submit"
-                        disabled={state === "sending"}
-                        className="inline-flex h-11 min-w-36 items-center justify-center gap-2 rounded-md bg-graphite px-5 text-sm font-medium text-paper transition-colors duration-300 hover:bg-ink disabled:opacity-80"
-                      >
+                      <SubmitButton disabled={state === "sending"}>
                         {state === "sending" ? (
                           <>
                             <span className="size-1.5 animate-pulse rounded-full bg-solder" /> Wird gelötet …
@@ -123,7 +120,7 @@ export function Contact() {
                         ) : (
                           "Anfrage senden"
                         )}
-                      </button>
+                      </SubmitButton>
                     </div>
                   </motion.form>
                 ) : (
@@ -135,7 +132,7 @@ export function Contact() {
                     transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
                     className="flex min-h-80 flex-col items-start justify-center"
                   >
-                    <span className="grid size-10 place-items-center rounded-md bg-graphite text-solder">✓</span>
+                    <span className="grid size-10 place-items-center rounded-[3px] bg-graphite text-solder">✓</span>
                     <h3 className="font-display mt-6 text-3xl font-semibold tracking-tight text-graphite">
                       {name ? `Danke, ${name}.` : "Danke."} Zoltan meldet sich.
                     </h3>

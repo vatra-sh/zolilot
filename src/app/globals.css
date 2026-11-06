@@ -43,6 +43,12 @@ body {
   }
 }
 
+/* hero photo: fade the top edge into the page, keep the bottom crisp */
+.hero-fade {
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 26%);
+  mask-image: linear-gradient(to bottom, transparent 0%, #000 26%);
+}
+
 /* x position of the solder trace rail, shared by the rail and every section pad */
 .rail-x {
   left: max(12px, calc(50% - 36rem - 44px));
