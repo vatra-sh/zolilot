@@ -185,7 +185,7 @@ export const team: {
     tag: "Erste Frau bei der Zolilöt AG",
     line: "Prüft jede Offerte, jede E-Mail und jede Folie von Maurice, bevor sie das Haus verlässt. Offerten kommen bei ihr mit einer Note zurück. Den Slogan «Wir machens möglich» hat sie dreimal rot angestrichen. Wir haben ihn trotzdem behalten. Sie hat Bedenken angemeldet.",
     bg: "#efdcd6",
-    avatar: { hair: ["variant23"], body: ["variant15"], gesture: ["point"], glasses: ["variant11"], glassesProbability: 100, beardProbability: 0 },
+    avatar: { hair: ["variant23"], body: ["variant15"], gesture: ["point"], glassesProbability: 0, beardProbability: 0 },
     facts: [
       { k: "Löt-Erbe", v: "Ihre Mutter hat schon gelötet. Damit ist sie die Einzige im Haus mit echter Löttradition in der Familie. Joël hat nachgefragt, ob ihre Mutter auch Kurse gibt." },
       { k: "Frauenquote", v: "Seit ihrem Eintritt von 0 % auf 7 %. Marwin aus dem HR verbucht das als persönlichen Erfolg." },
