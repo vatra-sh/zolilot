@@ -55,12 +55,12 @@ export function Team() {
         <p className="mt-16 text-xs font-semibold uppercase tracking-[0.14em] text-steel">
           Mitarbeitende
         </p>
-        <ul className="mt-5 grid gap-x-10 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="mt-5 grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
           {team.staff.map((p, i) => (
             <Reveal
               as="li"
               key={p.name}
-              delay={(i % 3) * 0.06}
+              delay={(i % 4) * 0.06}
               className="group flex gap-5 sm:block"
             >
               <div className="transition-transform duration-500 ease-out-soft group-hover:-translate-y-1">

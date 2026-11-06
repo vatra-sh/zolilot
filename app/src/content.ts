@@ -35,7 +35,7 @@ export const press = {
 export const stats = [
   { value: 360, suffix: " °C", label: "Betriebstemperatur", note: "konstant, ausser wenn jemand am Kabel zieht" },
   { value: 0, suffix: "", label: "Kalte Lötstellen", note: "die wir zugeben" },
-  { value: 12, suffix: "", label: "Mitarbeitende", note: "davon 2 Besitzer und 1 CEO" },
+  { value: 13, suffix: "", label: "Mitarbeitende", note: "davon 2 Besitzer und 1 CEO" },
   { value: 24, suffix: "/7", label: "Erreichbar", note: "ausser während der Schule" },
 ];
 
@@ -90,7 +90,7 @@ export const process = {
   steps: [
     { n: "01", title: "Anfrage", text: "Sie schildern Ihr Problem. Am liebsten im Klassenchat, gerne auch persönlich in der Pause." },
     { n: "02", title: "Analyse", text: "Deniz plant das Projekt. Zoltán schaut es sich an. Lange. Mit verschränkten Armen." },
-    { n: "03", title: "Ausführung", text: "Joël lötet bei 360 °C mit Flux Nº 7 aus Niklas' Labor. Cedric und Philippe schauen zu." },
+    { n: "03", title: "Ausführung", text: "Damon zähmt den Lötkolben. Joël lötet bei 360 °C mit Flux Nº 7 aus Niklas' Labor. Cedric und Philippe schauen zu." },
     { n: "04", title: "Qualitätskontrolle", text: "Levi prüft, Zoltán nickt. Dijar und Julius genehmigen. Damit ist es offiziell." },
   ],
 };
@@ -101,7 +101,7 @@ export const about = {
   story: [
     "Zoltán hatte die Idee, den Namen und den Lötkolben. Dijar hatte alles andere: die Domain, den Server, das WLAN-Passwort und als Einziger Zugriff auf das Aktienregister.",
     "Das Aktienregister ist eine Excel-Datei auf Dijars Laptop. An einem Dienstagnachmittag hat er sie aktualisiert, seither besitzt er 49 %. Julius war zufällig im Raum, sagte «ich auch» und besitzt seither ebenfalls 49 %. Zoltán bekam den Rest.",
-    "Heute beschäftigt die Zolilöt AG zwölf Mitarbeitende, vom Lehrling bis zum Chemiker. Gelötet wird hauptsächlich von Joël.",
+    "Heute beschäftigt die Zolilöt AG dreizehn Mitarbeitende, vom Lehrling bis zum Chemiker. Gelötet wird hauptsächlich von Joël.",
   ],
   quote: "Ich bin der CEO. Das steht so im Handelsregister.",
   quoteBy: "Zoltán, CEO, 2 % Aktien",
@@ -138,7 +138,7 @@ export type Person = {
 export const team: { eyebrow: string; title: string; lead: string; board: Person[]; staff: Person[] } = {
   eyebrow: "Team",
   title: "Die Köpfe hinter der Lötstelle.",
-  lead: "Zwölf Personen, ein Labor, ein Lötkolben. Jede Rolle ist besetzt, manche schon seit sechs Lehrjahren.",
+  lead: "Dreizehn Personen, ein Labor, ein Lötkolben und einer, der ihn zähmt. Jede Rolle ist besetzt, manche schon seit sechs Lehrjahren.",
   board: [
     {
       name: "Dijar",
@@ -176,6 +176,15 @@ export const team: { eyebrow: string; title: string; lead: string; board: Person
       line: "Der einzige mit einem Diplom im Löten. Mitarbeiter des Monats, seit 24 Monaten in Folge.",
       bg: "#e4e8dc",
       avatar: { hair: ["variant13"], body: ["variant14"], gestureProbability: 0, glassesProbability: 0, beard: ["variant07"], beardProbability: 100 },
+    },
+    {
+      name: "Damon",
+      role: "Lötkolben-Zähmer",
+      ring: "#KOLBEN-DOMPTEUR",
+      tag: "ehem. Fahrradmechaniker EFZ",
+      line: "Kein Lötkolben ist zu wild für ihn. Er nähert sich langsam, spricht ruhig und hält ihn nie am heissen Ende. Als gelernter Fahrradmechaniker wird bei ihm jeder Kolben vor dem Einsatz zentriert, geölt und auf 6 bar gepumpt.",
+      bg: "#e6dccb",
+      avatar: { hair: ["variant50"], body: ["variant10"], gesture: ["hand"], glassesProbability: 0, beard: ["variant09"], beardProbability: 100 },
     },
     {
       name: "Niklas",
@@ -278,7 +287,7 @@ export const testimonials = {
 export const career = {
   eyebrow: "Karriere",
   title: "Werde Teil des Teams.",
-  lead: "Zwölf Leute, zwei Besitzer, ein Lötkolben. Für Nummer dreizehn ist noch Platz.",
+  lead: "Dreizehn Leute, zwei Besitzer, ein Lötkolben. Für Nummer vierzehn ist noch Platz.",
   job: {
     title: "Lötlehrling (m/w/d) 100 %",
     meta: ["Aarau, Keller", "ab sofort", "unbefristet"],
