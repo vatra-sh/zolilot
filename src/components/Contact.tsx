@@ -52,7 +52,7 @@ export function Contact() {
             <dl className="space-y-8">
               {contact.details.map((d) => (
                 <div key={d.k}>
-                  <dt className="font-mono text-[11px] uppercase tracking-[0.14em] text-steel">{d.k}</dt>
+                  <dt className="font-medium text-[11px] uppercase tracking-[0.14em] text-steel">{d.k}</dt>
                   <dd className="mt-2 space-y-0.5 text-[15px] text-graphite">
                     {d.v.map((line, i) => (
                       <p key={line} className={i && d.k === "Telefon" ? "text-xs text-steel" : ""}>
@@ -110,7 +110,7 @@ export function Contact() {
                       <Err msg={errors.consent} />
                     </div>
                     <div className="flex items-center justify-between gap-4 sm:col-span-2">
-                      <p className="font-mono text-[11px] text-steel">Antwortzeit: 1 bis 365 Werktage</p>
+                      <p className="font-medium text-[11px] text-steel">Antwortzeit: 1 bis 365 Werktage</p>
                       <button
                         type="submit"
                         disabled={state === "sending"}

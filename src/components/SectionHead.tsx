@@ -18,7 +18,7 @@ export function SectionHead({
     <div className="grid gap-6 md:grid-cols-12 md:items-end">
       <Reveal className="md:col-span-7">
         <div className="relative">
-          <p className={`font-mono text-xs uppercase tracking-[0.18em] ${dark ? "text-solder" : "text-solder-ink"}`}>
+          <p className={`text-xs font-semibold uppercase tracking-[0.16em] ${dark ? "text-solder" : "text-solder-ink"}`}>
             {index} / {eyebrow}
           </p>
         </div>

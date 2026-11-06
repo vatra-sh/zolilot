@@ -11,7 +11,7 @@ export function StatusBar() {
 
   return (
     <div className="bg-graphite text-paper/75">
-      <div className="mx-auto flex h-8 max-w-6xl items-center justify-between px-7 font-mono text-[11px] tracking-wide md:px-8">
+      <div className="mx-auto flex h-8 max-w-6xl items-center justify-between px-7 font-medium text-[11px] tracking-wide md:px-8">
         <p className="flex items-center gap-2">
           <span className="relative flex size-1.5">
             <span className="absolute inset-0 animate-ping rounded-full bg-solder/60 [animation-duration:2.4s]" />

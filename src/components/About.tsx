@@ -47,7 +47,7 @@ export function About() {
               <dl className="mt-10 grid grid-cols-2 border-t border-paper/15">
                 {about.facts.map((f) => (
                   <div key={f.k} className="border-b border-paper/15 py-4 pr-4">
-                    <dt className="font-mono text-[11px] uppercase tracking-[0.14em] text-paper/50">{f.k}</dt>
+                    <dt className="font-medium text-[11px] uppercase tracking-[0.14em] text-paper/50">{f.k}</dt>
                     <dd className="mt-1 text-sm text-paper">{f.v}</dd>
                   </div>
                 ))}

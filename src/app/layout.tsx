@@ -1,10 +1,9 @@
 import type { Metadata, Viewport } from "next";
-import { Archivo, Inter, JetBrains_Mono } from "next/font/google";
+import { Archivo, Inter } from "next/font/google";
 import "./globals.css";
 
 const archivo = Archivo({ variable: "--font-archivo", subsets: ["latin"], axes: ["wdth"] });
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
-const mono = JetBrains_Mono({ variable: "--font-jetbrains", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Zolilöt AG · Wir machens möglich.",
@@ -23,7 +22,7 @@ export const viewport: Viewport = { themeColor: "#F6F5F2" };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="de-CH" className={`${archivo.variable} ${inter.variable} ${mono.variable} antialiased`}>
+    <html lang="de-CH" className={`${archivo.variable} ${inter.variable} antialiased`}>
       <body>{children}</body>
     </html>
   );

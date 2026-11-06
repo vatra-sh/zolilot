@@ -18,7 +18,7 @@ export function Career() {
           <article className="overflow-hidden rounded-lg border border-line bg-paper">
             <div className="flex flex-col gap-6 border-b border-line p-7 md:flex-row md:items-center md:justify-between md:p-9">
               <div>
-                <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-solder-ink">1 offene Stelle</p>
+                <p className="font-medium text-[11px] uppercase tracking-[0.14em] text-solder-ink">1 offene Stelle</p>
                 <h3 className="font-display mt-2 text-2xl font-semibold tracking-tight text-graphite md:text-3xl">
                   {job.title}
                 </h3>

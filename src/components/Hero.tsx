@@ -15,7 +15,7 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, ease }}
-          className="font-mono text-xs uppercase tracking-[0.18em] text-solder-ink"
+          className="text-xs font-semibold uppercase tracking-[0.16em] text-solder-ink"
         >
           {hero.eyebrow}
         </motion.p>
@@ -41,14 +41,9 @@ export function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.5, ease }}
-            className="order-last font-mono text-[11px] leading-relaxed text-steel md:order-first md:col-span-5 md:pb-1"
+            className="order-last text-sm text-steel md:order-first md:col-span-5 md:pb-1"
           >
-            {hero.certs.map((c, i) => (
-              <span key={c} className="md:block">
-                {c}
-                {i < hero.certs.length - 1 && <span className="md:hidden">{"  ·  "}</span>}
-              </span>
-            ))}
+            {hero.meta}
           </motion.p>
           <motion.div
             className="md:col-span-7 md:pl-10"
@@ -99,7 +94,7 @@ export function Hero() {
               </span>
             </motion.div>
           </div>
-          <figcaption className="mt-3 flex justify-between px-4 font-mono text-[11px] text-steel sm:px-0">
+          <figcaption className="mt-3 flex justify-between px-4 font-medium text-[11px] text-steel sm:px-0">
             <span>{hero.caption}</span>
             <span className="hidden sm:inline">Aarau, CH</span>
           </figcaption>
@@ -108,7 +103,7 @@ export function Hero() {
 
       <div className="mx-auto mt-16 max-w-6xl px-7 md:mt-20 md:px-8">
         <div className="flex flex-col gap-4 border-y border-line py-6 md:flex-row md:items-center md:gap-10">
-          <p className="shrink-0 font-mono text-[11px] uppercase tracking-[0.18em] text-steel">{press.label}</p>
+          <p className="shrink-0 font-medium text-[11px] uppercase tracking-[0.18em] text-steel">{press.label}</p>
           <ul className="flex flex-wrap gap-x-8 gap-y-2">
             {press.items.map((p, i) => (
               <li

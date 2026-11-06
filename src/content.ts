@@ -24,13 +24,13 @@ export const hero = {
     "Die Zolilöt AG ist Ihr Partner für Löttechnik, Kabelkonfektion und alles, was sonst noch irgendwie hält. Schweizer Qualität, von Hand gefertigt. Von einer Hand, um genau zu sein.",
   primary: { label: "Offerte anfragen", href: "#kontakt" },
   secondary: { label: "Leistungen ansehen", href: "#leistungen" },
-  certs: ["ISO 9001 (beantragt)", "Swiss Made (überwiegend)", "RoHS-konform (wahrscheinlich)"],
-  caption: "Abb. 1: Gründer bei der Arbeit. Gestellt.",
+  meta: "Inhabergeführt seit 2026 · Aarau, Schweiz",
+  caption: "Zoltan, Gründer und CEO, in der Werkstatt in Aarau.",
 };
 
 export const press = {
   label: "Bekannt aus",
-  items: ["Klassenchat", "Pausenhof", "Hinterste Reihe", "WhatsApp-Status", "Lehrerzimmer (Gerücht)"],
+  items: ["Klassenchat", "Pausenhof", "Hinterste Reihe", "WhatsApp-Status", "Lehrerzimmer"],
 };
 
 export const stats = [
@@ -162,7 +162,7 @@ export const contact = {
   title: "Sprechen wir über Ihre Verbindung.",
   lead: "Offerte, Notfall-Löten oder Bewerbung: Schreiben Sie uns. Wir antworten innerhalb von 1 bis 365 Werktagen.",
   details: [
-    { k: "Adresse", v: ["Zolilöt AG", "Kellergeschoss", "5000 Aarau (gefühlt)"] },
+    { k: "Adresse", v: ["Zolilöt AG", "Kellergeschoss", "5000 Aarau"] },
     { k: "Telefon", v: ["+41 00 000 00 00", "klingelt nicht"] },
     { k: "Öffnungszeiten", v: ["Mo bis Fr: nach der Schule", "Sa: nach Absprache", "So: niemals"] },
   ],
@@ -174,8 +174,18 @@ export const contact = {
   },
 };
 
+export const certs = {
+  label: "Zertifizierungen",
+  items: [
+    { src: "/certs/iso-9001.svg", alt: "ISO 9001 Qualitätsmanagement zertifiziert" },
+    { src: "/certs/swiss-made.svg", alt: "Swiss Made" },
+    { src: "/certs/rohs.svg", alt: "RoHS konform" },
+    { src: "/certs/loetqualitaet.svg", alt: "Lötqualität geprüft, Klasse 3" },
+  ],
+};
+
 export const footer = {
-  legal: "Fiktive Firma. Echter Humor. Es werden keine echten Lötarbeiten angeboten.",
+  legal: "Alle Personen, Inhalte und Zertifikate auf dieser Website sind fiktiv.",
   rights: "Alle Rechte vorbehalten, auch die linken.",
   links: ["Impressum", "Datenschutz", "AGB (Allgemeine Glücksbedingungen)"],
   privacy: "Wir speichern keine Daten. Wir vergessen auch sonst vieles.",

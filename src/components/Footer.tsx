@@ -1,10 +1,21 @@
 import Image from "next/image";
-import { company, footer, nav } from "@/content";
+import { certs, company, footer, nav } from "@/content";
 
 export function Footer() {
   return (
     <footer className="border-t border-line bg-paper-2">
       <div className="mx-auto max-w-6xl px-7 py-14 md:px-8 md:py-16">
+        <div className="mb-14 flex flex-col gap-6 border-b border-line pb-12 md:flex-row md:items-center md:justify-between">
+          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-steel">{certs.label}</p>
+          <ul className="grid grid-cols-4 items-center gap-5 sm:gap-10">
+            {certs.items.map((c) => (
+              <li key={c.src}>
+                {/* eslint-disable-next-line @next/next/no-img-element -- small static SVG seals */}
+                <img src={c.src} alt={c.alt} width={200} height={200} loading="lazy" className="size-16 sm:size-20 md:size-24" />
+              </li>
+            ))}
+          </ul>
+        </div>
         <div className="grid gap-10 md:grid-cols-12">
           <div className="md:col-span-5">
             <Image src="/logo.png" alt="Zolilöt AG" width={1321} height={399} className="h-10 w-auto" />
@@ -13,7 +24,7 @@ export function Footer() {
             </p>
           </div>
           <nav aria-label="Footer" className="md:col-span-3">
-            <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-steel">Unternehmen</p>
+            <p className="font-medium text-[11px] uppercase tracking-[0.14em] text-steel">Unternehmen</p>
             <ul className="mt-4 space-y-2">
               {nav.map((l) => (
                 <li key={l.href}>
@@ -25,7 +36,7 @@ export function Footer() {
             </ul>
           </nav>
           <div className="md:col-span-4">
-            <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-steel">Rechtliches</p>
+            <p className="font-medium text-[11px] uppercase tracking-[0.14em] text-steel">Rechtliches</p>
             <ul className="mt-4 space-y-2">
               {footer.links.map((l) => (
                 <li key={l} className="text-sm text-graphite/80">
