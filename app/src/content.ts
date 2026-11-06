@@ -180,7 +180,7 @@ export const team: {
   tabs: {
     staff: { label: "Mitarbeitende", intro: "Die Leute, die bei uns arbeiten. Mehr oder weniger." },
     advisors: {
-      label: "Lehrpersonen",
+      label: "Beratende",
       intro: "Bei uns fest angestellt, als Beraterinnen und Berater. Sie helfen, sie arbeiten nicht. Das ist vertraglich so geregelt.",
     },
   },
