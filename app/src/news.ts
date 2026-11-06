@@ -21,6 +21,32 @@ export const newsPage = {
 
 export const posts: Post[] = [
   {
+    slug: "frauenquote-28-prozent",
+    date: "2026-11-06",
+    category: "Personal",
+    title: "Frauenquote steigt auf 28 %",
+    excerpt: "Mit Violetta, Johanna, Aisha und Engjelina wächst die Zolilöt AG auf achtzehn Mitarbeitende. Die Frauenquote hat sich damit vervierfacht.",
+    body: [
+      {
+        type: "p",
+        text: "Die Zolilöt AG begrüsst vier neue Mitarbeiterinnen. Violetta und Johanna bilden ab sofort das Erste-Hilfe-Team für Lötunfälle, Aisha übernimmt die Finanzen und Engjelina startet ihr erstes Lehrjahr im HR. Gemeinsam mit Frau Deubelbeiss arbeiten damit fünf Frauen bei der Zolilöt AG.",
+      },
+      {
+        type: "facts",
+        items: [
+          { k: "Frauenquote", v: "Von 7 % auf 28 %. Aisha hat nachgerechnet. Diesmal war es nicht knapp." },
+          { k: "Erste Hilfe", v: "Violetta und Johanna. Das Unfallbuch hat seit ihrem Start 23 Einträge, 14 davon von Cedric." },
+          { k: "Finanzen", v: "Aisha. Sie hat das Firmenkonto, Dijar hat das Passwort. Gespräche laufen." },
+          { k: "HR", v: "Engjelina, 1. Lehrjahr. Marwin hat damit erstmals jemanden, für den er zuständig ist und der ihm auch zuhört." },
+        ],
+      },
+      {
+        type: "p",
+        text: "Marwin aus dem HR verbucht die Steigerung erneut als persönlichen Erfolg. Frau Deubelbeiss hat die Pressemitteilung lektoriert und nur zwei Kommas ergänzt. Intern gilt das als Bestnote.",
+      },
+    ],
+  },
+  {
     slug: "frau-deubelbeiss-beratung",
     date: "2026-11-06",
     category: "Personal",
