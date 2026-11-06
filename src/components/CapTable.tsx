@@ -7,12 +7,12 @@ const colors = ["#f08a24", "#f6c999", "#8a8e94"];
 const ease = [0.22, 1, 0.36, 1] as const;
 
 export function CapTable() {
-  const { label, holders } = about.capTable;
+  const { label, note, holders } = about.capTable;
   return (
     <div className="rounded-[4px] border border-paper/15 bg-graphite-2/50 p-6 md:p-8">
       <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
         <p className="text-xs font-semibold uppercase tracking-[0.14em] text-paper/50">{label}</p>
-        <p className="text-xs text-paper/50">Stand: heute, morgen, für immer</p>
+        <p className="text-xs text-paper/50">{note}</p>
       </div>
 
       <div className="relative mt-12">
@@ -51,6 +51,7 @@ export function CapTable() {
               </p>
               <p className="mt-1 text-sm font-medium text-paper">{h.name}</p>
               <p className="text-xs text-paper/50">{h.role}</p>
+              <p className="mt-1 text-xs italic text-solder/90">{h.how}</p>
             </div>
           </li>
         ))}

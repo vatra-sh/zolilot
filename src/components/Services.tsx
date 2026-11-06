@@ -1,4 +1,5 @@
 import { services } from "@/content";
+import { Flux } from "./Flux";
 import { Reveal } from "./Reveal";
 import { SectionHead } from "./SectionHead";
 
@@ -29,6 +30,8 @@ export function Services() {
             </Reveal>
           ))}
         </ul>
+
+        <Flux />
       </div>
     </section>
   );

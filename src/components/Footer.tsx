@@ -51,8 +51,9 @@ export function Footer() {
           <p>
             © {company.founded} {company.name} · UID {company.uid} · {footer.rights}
           </p>
-          <p>{footer.legal}</p>
+          <p>{footer.it}</p>
         </div>
+        <p className="mt-2 text-xs text-steel md:text-right">{footer.legal}</p>
       </div>
     </footer>
   );

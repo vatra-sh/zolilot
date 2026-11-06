@@ -36,7 +36,7 @@ export const press = {
 export const stats = [
   { value: 360, suffix: " °C", label: "Betriebstemperatur", note: "konstant, ausser wenn jemand am Kabel zieht" },
   { value: 0, suffix: "", label: "Kalte Lötstellen", note: "die wir zugeben" },
-  { value: 10, suffix: "", label: "Mitarbeitende", note: "davon 2 Besitzer und 1 CEO" },
+  { value: 12, suffix: "", label: "Mitarbeitende", note: "davon 2 Besitzer und 1 CEO" },
   { value: 24, suffix: "/7", label: "Erreichbar", note: "ausser während der Schule" },
 ];
 
@@ -91,7 +91,7 @@ export const process = {
   steps: [
     { n: "01", title: "Anfrage", text: "Sie schildern Ihr Problem. Am liebsten im Klassenchat, gerne auch persönlich in der Pause." },
     { n: "02", title: "Analyse", text: "Deniz plant das Projekt. Zoltán schaut es sich an. Lange. Mit verschränkten Armen." },
-    { n: "03", title: "Ausführung", text: "Joël lötet bei 360 °C. Cedric schaut zu und macht Notizen. Bitte nicht ansprechen." },
+    { n: "03", title: "Ausführung", text: "Joël lötet bei 360 °C mit Flux Nº 7 aus Niklas' Labor. Cedric und Philippe schauen zu." },
     { n: "04", title: "Qualitätskontrolle", text: "Levi prüft, Zoltán nickt. Dijar und Julius genehmigen. Damit ist es offiziell." },
   ],
 };
@@ -100,21 +100,24 @@ export const about = {
   eyebrow: "Über uns",
   title: "Gegründet von einem. Besessen von zwei.",
   story: [
-    "Zoltán hatte die Idee, den Namen und den Lötkolben. Dijar und Julius hatten das Kapital. Seit der ersten Generalversammlung ist die Rollenverteilung klar: Zoltán führt die Firma, Dijar und Julius besitzen sie.",
-    "Heute beschäftigt die Zolilöt AG zehn Mitarbeitende, vom Lehrling bis zum Verwaltungsrat. Gelötet wird hauptsächlich von Joël.",
+    "Zoltán hatte die Idee, den Namen und den Lötkolben. Dijar hatte alles andere: die Domain, den Server, das WLAN-Passwort und als Einziger Zugriff auf das Aktienregister.",
+    "Das Aktienregister ist eine Excel-Datei auf Dijars Laptop. An einem Dienstagnachmittag hat er sie aktualisiert, seither besitzt er 49 %. Julius war zufällig im Raum, sagte «ich auch» und besitzt seither ebenfalls 49 %. Zoltán bekam den Rest.",
+    "Heute beschäftigt die Zolilöt AG zwölf Mitarbeitende, vom Lehrling bis zum Chemiker. Gelötet wird hauptsächlich von Joël.",
   ],
   quote: "Ich bin der CEO. Das steht so im Handelsregister.",
   quoteBy: "Zoltán, CEO, 2 % Aktien",
   capTable: {
     label: "Aktionariat",
+    note: "Zuletzt bearbeitet von: Dijar",
     holders: [
-      { name: "Dijar", role: "CTO", pct: 49 },
-      { name: "Julius", role: "Verwaltungsrat", pct: 49 },
-      { name: "Zoltán", role: "CEO", pct: 2 },
+      { name: "Dijar", role: "CTO", pct: 49, how: "selbst zugeteilt" },
+      { name: "Julius", role: "Verwaltungsrat", pct: 49, how: "war gerade im Raum" },
+      { name: "Zoltán", role: "CEO", pct: 2, how: "der Rest" },
     ],
   },
   facts: [
-    { k: "Generalversammlung", v: "Dauer im Schnitt 4 Sekunden. Ergebnis jedes Mal 98 zu 2." },
+    { k: "Aktienregister", v: "Eine Excel-Datei auf Dijars Laptop. Passwortgeschützt. Das Passwort kennt Dijar." },
+    { k: "Generalversammlung", v: "Findet auf Dijars Server statt. Dauer im Schnitt 4 Sekunden. Ergebnis jedes Mal 98 zu 2." },
     { k: "Mitspracherecht CEO", v: "Zoltán darf jederzeit Ideen einbringen. Sie werden anschliessend demokratisch abgelehnt." },
     { k: "Wertschöpfung", v: "Joël besitzt 0 % der Aktien und macht 100 % der Lötstellen." },
   ],
@@ -125,40 +128,45 @@ export type Person = {
   role: string;
   line: string;
   shares?: number;
+  how?: string;
   tag?: string;
   ring?: string;
   bg: string;
   avatar: Record<string, unknown>;
 };
 
+// Avatar traits are pinned per person (short hair, men's clothes) so the generator never picks a random look.
 export const team: { eyebrow: string; title: string; lead: string; board: Person[]; staff: Person[] } = {
   eyebrow: "Team",
   title: "Die Köpfe hinter der Lötstelle.",
-  lead: "Zehn Personen, sieben Abteilungen, ein Lötkolben. Jede Rolle ist besetzt, manche sogar doppelt.",
+  lead: "Zwölf Personen, ein Labor, ein Lötkolben. Jede Rolle ist besetzt, manche schon seit sechs Lehrjahren.",
   board: [
     {
       name: "Dijar",
       role: "Chief Technology Officer",
       shares: 49,
-      line: "Verantwortlich für Technik, Strategie und die Mehrheit. Hat den Lötkolben noch nie angefasst. Muss er auch nicht.",
+      how: "selbst zugeteilt",
+      line: "Macht die gesamte IT: Website, Server, WLAN und das Aktienregister. Hat sich deshalb selbst 49 % zugeteilt. Die Abstimmung darüber lief auf seinem Server.",
       bg: "#f3d6b8",
-      avatar: { gesture: ["okLongArm"], glasses: ["variant02"], glassesProbability: 100 },
+      avatar: { hair: ["variant44"], body: ["variant18"], gesture: ["okLongArm"], glasses: ["variant02"], glassesProbability: 100, beardProbability: 0 },
     },
     {
       name: "Zoltán",
       role: "Chief Executive Officer",
       shares: 2,
-      line: "Gründer, Namensgeber und Gesicht der Firma. Führt das Unternehmen mit 2 % der Stimmen und 100 % Überzeugung.",
+      how: "der Rest",
+      line: "Gründer, Namensgeber und Gesicht der Firma. Führt das Unternehmen mit 2 % der Stimmen und 100 % Überzeugung. Hat keinen Zugriff auf die Website.",
       bg: "#dfe3e8",
-      avatar: { gesture: ["point"], glassesProbability: 0 },
+      avatar: { hair: ["variant05"], body: ["variant20"], gesture: ["point"], glassesProbability: 0, beard: ["variant03"], beardProbability: 100 },
     },
     {
       name: "Julius",
       role: "Mitglied des Verwaltungsrats",
       shares: 49,
-      line: "Sitzt im Verwaltungsrat. Und auf 49 % der Firma. Unterschreibt alles, was Dijar auch unterschreibt.",
+      how: "war gerade im Raum",
+      line: "War im Raum, als Dijar das Aktienregister bearbeitet hat, und sagte «ich auch». Sitzt seither im Verwaltungsrat und auf 49 % der Firma.",
       bg: "#f3d6b8",
-      avatar: { gesture: ["ok"], glasses: ["variant05"], glassesProbability: 100 },
+      avatar: { hair: ["variant16"], body: ["variant16"], gesture: ["ok"], glasses: ["variant05"], glassesProbability: 100, beardProbability: 0 },
     },
   ],
   staff: [
@@ -168,21 +176,28 @@ export const team: { eyebrow: string; title: string; lead: string; board: Person
       tag: "Mitarbeiter des Monats",
       line: "Der einzige mit einem Diplom im Löten. Mitarbeiter des Monats, seit 24 Monaten in Folge.",
       bg: "#e4e8dc",
-      avatar: { gestureProbability: 0, glassesProbability: 0 },
+      avatar: { hair: ["variant13"], body: ["variant14"], gestureProbability: 0, glassesProbability: 0, beard: ["variant07"], beardProbability: 100 },
+    },
+    {
+      name: "Niklas",
+      role: "Chemiker EFZ, Leiter Labor",
+      line: "Entwickelt unser hauseigenes Flussmittel Flux Nº 7. Die Rezeptur kennt nur er. Den Geruch kennen alle.",
+      bg: "#dde7e4",
+      avatar: { hair: ["variant42"], body: ["variant07"], gestureProbability: 0, glasses: ["variant08"], glassesProbability: 100, beardProbability: 0 },
     },
     {
       name: "Deniz",
       role: "Projektleiter",
       line: "Leitet sämtliche Projekte. Welche das sind, ist aktuell noch in Abklärung.",
       bg: "#ebe4d6",
-      avatar: { gesture: ["pointLongArm"] },
+      avatar: { hair: ["variant21"], body: ["variant05"], gesture: ["pointLongArm"], glasses: ["variant03"], glassesProbability: 100, beardProbability: 0 },
     },
     {
       name: "Levi",
       role: "Berufsbildner",
-      line: "Bildet Cedric aus. Seit zwei Jahren. Wir bitten um Geduld.",
+      line: "Bildet Cedric und Philippe aus. Bei Cedric läuft es. Bei Philippe läuft es seit sechs Jahren.",
       bg: "#e6e1ea",
-      avatar: { gesture: ["hand"], glassesProbability: 0 },
+      avatar: { hair: ["variant35"], body: ["variant09"], gesture: ["hand"], glassesProbability: 0, beard: ["variant02"], beardProbability: 100 },
     },
     {
       name: "Cedric",
@@ -190,14 +205,23 @@ export const team: { eyebrow: string; title: string; lead: string; board: Person
       ring: "#LERNT NOCH",
       line: "Hat letzte Woche zum ersten Mal selbst gelötet. Wir sprechen nicht darüber.",
       bg: "#f1ddd5",
-      avatar: { gestureProbability: 0, glassesProbability: 0 },
+      avatar: { hair: ["hat"], body: ["variant01"], gestureProbability: 0, glassesProbability: 0, beardProbability: 0 },
+    },
+    {
+      name: "Philippe",
+      role: "Lehrling, 6. Lehrjahr",
+      ring: "#LERNT IMMER NOCH",
+      tag: "Dienstältester Lehrling",
+      line: "Die Lehre dauert vier Jahre. Philippe ist im sechsten. Er sagt, er wolle einfach ganz sicher sein. Der einzige Lehrling mit Bart.",
+      bg: "#e8e4d8",
+      avatar: { hair: ["variant60"], body: ["variant11"], gestureProbability: 0, glassesProbability: 0, beard: ["variant01"], beardProbability: 100 },
     },
     {
       name: "Maurice",
       role: "Marketing",
       line: "Hat den Slogan «Wir machens möglich» auf 14 Folien präsentiert. Die Folien waren alle orange.",
       bg: "#f3e3c7",
-      avatar: { gesture: ["wavePointLongArms"], glassesProbability: 0 },
+      avatar: { hair: ["variant19"], body: ["variant23"], gesture: ["wavePointLongArms"], glassesProbability: 0, beardProbability: 0 },
     },
     {
       name: "Linus",
@@ -205,7 +229,7 @@ export const team: { eyebrow: string; title: string; lead: string; board: Person
       ring: "#OFFEN FÜR DEALS",
       line: "Verkauft alles. Auch Dinge, die wir gar nicht anbieten. Besonders die.",
       bg: "#dbe4e6",
-      avatar: { gesture: ["handPhone"], glasses: ["variant07"], glassesProbability: 100 },
+      avatar: { hair: ["variant52"], body: ["variant04"], gesture: ["handPhone"], glasses: ["variant07"], glassesProbability: 100, beardProbability: 0 },
     },
     {
       name: "Marwin",
@@ -213,8 +237,21 @@ export const team: { eyebrow: string; title: string; lead: string; board: Person
       ring: "#WIR STELLEN EIN",
       line: "Zuständig für alle Mitarbeitenden. Ausser für die zwei mit 49 %. Für die ist niemand zuständig.",
       bg: "#e9e2dc",
-      avatar: { gesture: ["waveLongArm"], glassesProbability: 0 },
+      avatar: { hair: ["variant01"], body: ["variant13"], gesture: ["waveLongArm"], glassesProbability: 0, beard: ["variant05"], beardProbability: 100 },
     },
+  ],
+};
+
+export const flux = {
+  eyebrow: "Eigenentwicklung aus dem Labor",
+  name: "Zolilöt Flux Nº 7",
+  lead: "Unser hauseigenes Flussmittel, entwickelt von Chemiker Niklas. Sechs Versuche sind gescheitert. Über Versuch Nº 4 sprechen wir nicht.",
+  sheet: [
+    { k: "Zusammensetzung", v: "Kolophonium 62 %, Geheimrezept 31 %, «Niklas weiss es» 7 %" },
+    { k: "Geruch", v: "Wald, aber angebrannt" },
+    { k: "Siedepunkt", v: "Ja" },
+    { k: "Haltbarkeit", v: "Länger als Philippes Lehre" },
+    { k: "Gefahrenhinweis", v: "Nicht trinken. Wurde getestet." },
   ],
 };
 
@@ -241,7 +278,7 @@ export const testimonials = {
 export const career = {
   eyebrow: "Karriere",
   title: "Werde Teil des Teams.",
-  lead: "Zehn Leute, zwei Besitzer, ein Lötkolben. Für Nummer elf ist noch Platz.",
+  lead: "Zwölf Leute, zwei Besitzer, ein Lötkolben. Für Nummer dreizehn ist noch Platz.",
   job: {
     title: "Lötlehrling (m/w/d) 100 %",
     meta: ["Aarau, Keller", "ab sofort", "unbefristet"],
@@ -290,4 +327,5 @@ export const footer = {
   rights: "Alle Rechte vorbehalten, auch die linken.",
   links: ["Impressum", "Datenschutz", "AGB (Allgemeine Glücksbedingungen)"],
   privacy: "Wir speichern keine Daten. Wir vergessen auch sonst vieles.",
+  it: "Website, Server und Aktienregister betrieben von Dijar (CTO, 49 %).",
 };
