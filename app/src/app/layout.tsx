@@ -6,6 +6,7 @@ const archivo = Archivo({ variable: "--font-archivo", subsets: ["latin"], axes: 
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://xn--zolilt-0xa.vatra.sh"),
   title: "Zolilöt AG · Wir machens möglich.",
   description:
     "Löttechnik, Kabelkonfektion und Reparatur aus Aarau. Schweizer Qualität, von Hand gefertigt. Von Joël, um genau zu sein.",

@@ -1,7 +1,12 @@
+import path from "node:path";
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // self-contained server bundle for the docker image
+  output: "standalone",
+  outputFileTracingRoot: path.resolve(import.meta.dirname),
+  // only a few small static PNGs; no sharp needed in the image
+  images: { unoptimized: true },
   cacheComponents: true,
   partialPrefetching: true,
   turbopack: {
