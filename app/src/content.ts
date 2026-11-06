@@ -130,15 +130,23 @@ export type Person = {
   how?: string;
   tag?: string;
   ring?: string;
+  ringColor?: string;
   bg: string;
   avatar: Record<string, unknown>;
 };
 
 // Avatar traits are pinned per person (short hair, men's clothes) so the generator never picks a random look.
-export const team: { eyebrow: string; title: string; lead: string; board: Person[]; staff: Person[] } = {
+export const team: {
+  eyebrow: string;
+  title: string;
+  lead: string;
+  board: Person[];
+  advisor: Person & { label: string; facts: { k: string; v: string }[] };
+  staff: Person[];
+} = {
   eyebrow: "Team",
   title: "Die Köpfe hinter der Lötstelle.",
-  lead: "Dreizehn Personen, ein Labor, ein Lötkolben und einer, der ihn zähmt. Jede Rolle ist besetzt, manche schon seit sechs Lehrjahren.",
+  lead: "Dreizehn Personen, eine externe Beraterin, ein Labor, ein Lötkolben und einer, der ihn zähmt. Jede Rolle ist besetzt, manche schon seit sechs Lehrjahren.",
   board: [
     {
       name: "Dijar",
@@ -168,6 +176,22 @@ export const team: { eyebrow: string; title: string; lead: string; board: Person
       avatar: { hair: ["variant16"], body: ["variant16"], gesture: ["ok"], glasses: ["variant05"], glassesProbability: 100, beardProbability: 0 },
     },
   ],
+  advisor: {
+    label: "Externe Beratung",
+    name: "Frau Deubelbeiss",
+    role: "Externe Beraterin für Sprache & Unternehmenskommunikation",
+    ring: "#BITTE ÜBERARBEITEN",
+    ringColor: "#d62828",
+    tag: "Erste Frau bei der Zolilöt AG",
+    line: "Prüft jede Offerte, jede E-Mail und jede Folie von Maurice, bevor sie das Haus verlässt. Offerten kommen bei ihr mit einer Note zurück. Den Slogan «Wir machens möglich» hat sie dreimal rot angestrichen. Wir haben ihn trotzdem behalten. Sie hat Bedenken angemeldet.",
+    bg: "#efdcd6",
+    avatar: { hair: ["variant23"], body: ["variant15"], gesture: ["point"], glasses: ["variant11"], glassesProbability: 100, beardProbability: 0 },
+    facts: [
+      { k: "Löt-Erbe", v: "Ihre Mutter hat schon gelötet. Damit ist sie die Einzige im Haus mit echter Löttradition in der Familie. Joël hat nachgefragt, ob ihre Mutter auch Kurse gibt." },
+      { k: "Frauenquote", v: "Seit ihrem Eintritt von 0 % auf 7 %. Marwin aus dem HR verbucht das als persönlichen Erfolg." },
+      { k: "Honorar", v: "Wird in korrekt gesetzten Kommas ausbezahlt." },
+    ],
+  },
   staff: [
     {
       name: "Joël",
@@ -337,4 +361,5 @@ export const footer = {
   links: ["Impressum", "Datenschutz", "AGB (Allgemeine Glücksbedingungen)"],
   privacy: "Wir speichern keine Daten. Wir vergessen auch sonst vieles.",
   it: "Website, Server und Aktienregister betrieben von Dijar (CTO, 49 %).",
+  proofread: "Lektorat: Frau Deubelbeiss. Alle verbleibenden Fehler gehören Dijar.",
 };

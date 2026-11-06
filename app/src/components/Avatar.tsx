@@ -23,7 +23,7 @@ export function Avatar({ person, size = "md" }: { person: Person; size?: "md" | 
           <defs>
             <path id={id} d="M 8 53 A 42 42 0 0 0 92 53" />
           </defs>
-          <path d="M 6 48 A 44 44 0 0 0 94 48" fill="none" stroke="#f08a24" strokeWidth="12" />
+          <path d="M 6 48 A 44 44 0 0 0 94 48" fill="none" stroke={person.ringColor ?? "#f08a24"} strokeWidth="12" />
           <text fill="#fff" fontSize="8.4" fontWeight="700" letterSpacing="0.4" fontFamily="Arial, sans-serif">
             <textPath href={`#${id}`} startOffset="50%" textAnchor="middle" dominantBaseline="middle">
               {person.ring}

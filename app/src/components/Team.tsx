@@ -52,6 +52,33 @@ export function Team() {
           ))}
         </ul>
 
+        <p className="mt-16 text-xs font-semibold uppercase tracking-[0.14em] text-steel">{team.advisor.label}</p>
+        <Reveal className="mt-5">
+          <article className="group grid gap-8 rounded-[4px] border border-line bg-white/60 p-7 md:grid-cols-12 md:gap-10 md:p-9">
+            <div className="flex flex-col items-start gap-5 sm:flex-row sm:items-center md:col-span-5 md:flex-col md:items-start">
+              <div className="transition-transform duration-500 ease-out-soft group-hover:-translate-y-1">
+                <Avatar person={team.advisor} size="lg" />
+              </div>
+              <div>
+                <h3 className="font-display text-2xl font-semibold tracking-tight text-graphite">{team.advisor.name}</h3>
+                <p className="mt-1 text-sm text-steel">{team.advisor.role}</p>
+                <p className="mt-1 text-sm text-solder-ink">{team.advisor.tag}</p>
+              </div>
+            </div>
+            <div className="md:col-span-7">
+              <p className="text-pretty text-[15px] leading-relaxed text-graphite/80">{team.advisor.line}</p>
+              <dl className="mt-6 border-t border-line">
+                {team.advisor.facts.map((f) => (
+                  <div key={f.k} className="grid gap-1 border-b border-line py-3.5 sm:grid-cols-[8rem_1fr] sm:gap-6">
+                    <dt className="text-xs font-semibold uppercase tracking-[0.14em] text-steel sm:pt-0.5">{f.k}</dt>
+                    <dd className="text-[15px] leading-relaxed text-graphite/85">{f.v}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          </article>
+        </Reveal>
+
         <p className="mt-16 text-xs font-semibold uppercase tracking-[0.14em] text-steel">
           Mitarbeitende
         </p>
