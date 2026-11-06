@@ -98,9 +98,22 @@ function PersonGrid({ people }: { people: Person[] }) {
             <p className="mt-0.5 text-sm text-steel">{p.role}</p>
             {p.tag && <p className="text-sm text-solder-ink">{p.tag}</p>}
           </div>
-          <p className="col-span-2 text-pretty text-sm leading-relaxed text-graphite/75 sm:col-span-1">{p.line}</p>
+          <p className="col-span-2 text-pretty text-sm leading-relaxed text-graphite/75 sm:col-span-1">{rich(p.line)}</p>
         </Reveal>
       ))}
     </ul>
+  );
+}
+
+/** Card text supports *italic* spans (people send their bios with formatting). */
+function rich(text: string) {
+  return text.split(/\*([^*]+)\*/g).map((part, i) =>
+    i % 2 ? (
+      <em key={i} className="text-graphite">
+        {part}
+      </em>
+    ) : (
+      part
+    ),
   );
 }

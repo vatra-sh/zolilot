@@ -217,7 +217,7 @@ export const team: {
     {
       name: "Niklas",
       role: "Chemiker EFZ, Leiter Labor",
-      line: "Entwickelt unser hauseigenes Flussmittel Flux Nº 7. Die Rezeptur kennt nur er. Den Geruch kennen alle.",
+      line: "*Visionär. Wissenschaftler. Unternehmer.* Zumindest in meiner eigenen Vorstellung. Ich löse Probleme, die vorher niemand hatte, mit Lösungen, nach denen niemand gefragt hat. Ob das die Welt besser macht, ist Gegenstand laufender Untersuchungen.",
       bg: "#dde7e4",
       avatar: { hair: ["variant42"], body: ["variant07"], gestureProbability: 0, glasses: ["variant08"], glassesProbability: 100, beardProbability: 0 },
     },
@@ -248,7 +248,7 @@ export const team: {
       role: "Lehrling, 6. Lehrjahr",
       ring: "#LERNT IMMER NOCH",
       tag: "Dienstältester Lehrling",
-      line: "Die Lehre dauert vier Jahre. Philippe ist im sechsten. Er sagt, er wolle einfach ganz sicher sein. Der einzige Lehrling mit Bart.",
+      line: "Die Lehre dauert vier Jahre. Philippe ist im sechsten. Er sagt, er wolle einfach ganz sicher sein. Der einzige Lehrling mit Bart. Mit 205 cm zu gross für den Tisch.",
       bg: "#e8e4d8",
       avatar: { hair: ["variant60"], body: ["variant11"], gestureProbability: 0, glassesProbability: 0, beard: ["variant01"], beardProbability: 100 },
     },
