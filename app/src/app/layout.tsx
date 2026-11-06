@@ -4,6 +4,7 @@ import { MotionConfig } from "motion/react";
 import { Footer } from "@/components/Footer";
 import { Nav } from "@/components/Nav";
 import { StatusBar } from "@/components/StatusBar";
+import { CartDrawer } from "@/components/shop/CartDrawer";
 import "./globals.css";
 
 const archivo = Archivo({ variable: "--font-archivo", subsets: ["latin"], axes: ["wdth"] });
@@ -27,13 +28,14 @@ export const viewport: Viewport = { themeColor: "#F6F5F2" };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="de-CH" className={`${archivo.variable} ${inter.variable} antialiased`}>
+    <html lang="de-CH" data-scroll-behavior="smooth" className={`${archivo.variable} ${inter.variable} antialiased`}>
       <body>
         <MotionConfig reducedMotion="user">
           <StatusBar />
           <Nav />
           {children}
           <Footer />
+          <CartDrawer />
         </MotionConfig>
       </body>
     </html>

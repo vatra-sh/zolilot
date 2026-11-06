@@ -1,8 +1,41 @@
 "use client";
 
+import { AnimatePresence, motion } from "motion/react";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { shop } from "@/content";
+
+/** Shop pages: the classic announcement bar, crossfading every 4 s. */
+function Announcements() {
+  const [i, setI] = useState(0);
+  useEffect(() => {
+    const id = setInterval(() => setI((n) => (n + 1) % shop.announcements.length), 4000);
+    return () => clearInterval(id);
+  }, []);
+  return (
+    <div className="bg-graphite text-paper/85">
+      <div className="mx-auto flex h-8 max-w-6xl items-center justify-center px-7 text-[11px] font-medium tracking-wide md:px-8">
+        <AnimatePresence mode="wait" initial={false}>
+          <motion.p
+            key={i}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+          >
+            {shop.announcements[i]}
+          </motion.p>
+        </AnimatePresence>
+      </div>
+    </div>
+  );
+}
 
 export function StatusBar() {
+  return usePathname().startsWith("/shop") ? <Announcements /> : <SolderStatus />;
+}
+
+function SolderStatus() {
   const [temp, setTemp] = useState(360);
   useEffect(() => {
     const id = setInterval(() => setTemp(358 + Math.round(Math.random() * 4)), 2200);
