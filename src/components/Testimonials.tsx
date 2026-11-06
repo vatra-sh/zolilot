@@ -6,7 +6,7 @@ export function Testimonials() {
   return (
     <section id="referenzen" className="relative py-24 md:py-32">
       <div className="mx-auto max-w-6xl px-7 md:px-8">
-        <SectionHead index="04" eyebrow={testimonials.eyebrow} title={testimonials.title} lead={testimonials.rating} />
+        <SectionHead index="05" eyebrow={testimonials.eyebrow} title={testimonials.title} lead={testimonials.rating} />
 
         <ul className="mt-14 grid gap-5 md:mt-20 md:grid-cols-3">
           {testimonials.items.map((t, i) => (

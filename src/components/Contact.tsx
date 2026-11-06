@@ -46,7 +46,7 @@ export function Contact() {
   return (
     <section id="kontakt" className="relative py-24 md:py-32">
       <div className="mx-auto max-w-6xl px-7 md:px-8">
-        <SectionHead index="06" eyebrow={contact.eyebrow} title={contact.title} lead={contact.lead} />
+        <SectionHead index="07" eyebrow={contact.eyebrow} title={contact.title} lead={contact.lead} />
 
         <div className="mt-14 grid gap-12 md:mt-20 md:grid-cols-12 md:gap-10">
           <Reveal className="md:col-span-4">

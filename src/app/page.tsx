@@ -9,6 +9,7 @@ import { Process } from "@/components/Process";
 import { Services } from "@/components/Services";
 import { Stats } from "@/components/Stats";
 import { StatusBar } from "@/components/StatusBar";
+import { Team } from "@/components/Team";
 import { Testimonials } from "@/components/Testimonials";
 import { TraceRail } from "@/components/Trace";
 
@@ -24,6 +25,7 @@ export default function Home() {
           <Services />
           <Process />
           <About />
+          <Team />
           <Testimonials />
           <Career />
           <Contact />

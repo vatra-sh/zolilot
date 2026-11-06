@@ -12,7 +12,7 @@ export function Career() {
   return (
     <section id="karriere" className="relative bg-paper-2/60 py-24 md:py-32">
       <div className="mx-auto max-w-6xl px-7 md:px-8">
-        <SectionHead index="05" eyebrow={career.eyebrow} title={career.title} lead={career.lead} />
+        <SectionHead index="06" eyebrow={career.eyebrow} title={career.title} lead={career.lead} />
 
         <Reveal className="mt-14 md:mt-20">
           <article className="overflow-hidden rounded-lg border border-line bg-paper">
