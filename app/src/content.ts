@@ -218,7 +218,8 @@ export const team: { eyebrow: string; title: string; lead: string; board: Person
     {
       name: "Maurice",
       role: "Marketing",
-      line: "Hat den Slogan «Wir machens möglich» auf 14 Folien präsentiert. Die Folien waren alle orange.",
+      ring: "#THOUGHT LEADER",
+      line: "Nennt sich auf LinkedIn «Visionär, Storyteller, Disruptor». Hat den Slogan «Wir machens möglich» auf 14 Folien präsentiert. Die Folien waren alle orange.",
       bg: "#f3e3c7",
       avatar: { hair: ["variant19"], body: ["variant23"], gesture: ["wavePointLongArms"], glassesProbability: 0, beardProbability: 0 },
     },
