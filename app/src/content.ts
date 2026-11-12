@@ -201,7 +201,7 @@ export const team: {
       ring: "#SCHUTZBRILLE AUF",
       ringColor: "#c2410c",
       tag: "Einziger mit Schlüssel zum Feuerlöscher",
-      line: "Hat jede Lötstelle, jedes Meeting und alle Ideen von Zoltán mit einem Gefahrensymbol versehen. Stuft Flux Nº 7 als meldepflichtig ein. Trägt die Schutzbrille auch in der Kaffeepause. Aus Prinzip.",
+      line: "Der Diktator der Löterei. Hat jede Lötstelle und alle Ideen von Zoltán mit einem Gefahrensymbol versehen. Trägt die Schutzbrille auch in der Kaffeepause. Philippe und Cedric verheimlichen ihre Fehler vor ihm. Bisher sind es 14.",
       bg: "#f4e3c4",
       avatar: { hair: ["variant07"], body: ["variant05"], gesture: ["point"], glasses: ["variant03"], glassesProbability: 100, beardProbability: 0 },
     },
@@ -254,7 +254,7 @@ export const team: {
     {
       name: "Deniz",
       role: "Projektleiter",
-      line: "Leitet sämtliche Projekte. Welche das sind, ist aktuell noch in Abklärung.",
+      line: "Der Diktator der Projektleitung. Leitet sämtliche Projekte, welche das sind, ist aktuell noch in Abklärung. Wer ein Projekt will, stellt bei ihm einen Antrag. Zoltán hat elf gestellt. Alle sind in Abklärung.",
       bg: "#ebe4d6",
       avatar: { hair: ["variant21"], body: ["variant05"], gesture: ["pointLongArm"], glasses: ["variant03"], glassesProbability: 100, beardProbability: 0 },
     },
