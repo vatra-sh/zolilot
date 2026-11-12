@@ -44,6 +44,18 @@ export default async function Article({ params }: { params: Promise<{ slug: stri
               <p key={i} className="text-pretty text-[17px] leading-relaxed text-graphite/85">
                 {b.text}
               </p>
+            ) : b.type === "link" ? (
+              <p key={i}>
+                <Link
+                  href={b.href}
+                  className="group inline-flex items-center gap-2 text-[17px] font-medium text-graphite underline decoration-line decoration-1 underline-offset-4 transition-colors duration-300 hover:decoration-solder"
+                >
+                  {b.label}
+                  <span aria-hidden className="transition-transform duration-500 ease-out-soft group-hover:translate-x-1">
+                    →
+                  </span>
+                </Link>
+              </p>
             ) : (
               <dl key={i} className="border-y border-line">
                 {b.items.map((f) => (

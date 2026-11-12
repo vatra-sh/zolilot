@@ -2,7 +2,7 @@
 // Image props are pinned per product (no seeded randomness), like the team avatars.
 
 export type CategoryId = "kolben" | "labor" | "werkzeug" | "kabel" | "merch" | "digital" | "sets";
-export type TeamPick = "joel" | "damon" | "niklas" | "maurice";
+export type TeamPick = "joel" | "damon" | "niklas" | "maurice" | "trottmann";
 export type Reviewer =
   | "Dijar"
   | "Zoltán"
@@ -17,7 +17,8 @@ export type Reviewer =
   | "Maurice"
   | "Linus"
   | "Marwin"
-  | "Frau Deubelbeiss";
+  | "Frau Deubelbeiss"
+  | "Herr Trottmann";
 
 export type ArtKind =
   | "iron"
@@ -94,6 +95,7 @@ export const teamPicks: { id: TeamPick; label: string }[] = [
   { id: "damon", label: "Von Damon gezähmt" },
   { id: "niklas", label: "Aus Niklas' Labor" },
   { id: "maurice", label: "Von Maurice empfohlen" },
+  { id: "trottmann", label: "Von Herrn Trottmann freigegeben" },
 ];
 
 const SZ = { from: "Shenzhen", min: 3, max: 6 } as const;
@@ -886,6 +888,116 @@ export const products: Product[] = [
       colors: ["#e8c21a", "#1d1f22", "#d62828"],
       sticker: { text: "800°C|FEUERFEST", shape: "burst" },
       size: "Einheitsgrösse",
+    },
+  },
+  {
+    slug: "schutzbrille-trottmann-edition",
+    name: "Schutzbrille «Trottmann Edition»",
+    title:
+      "Schutzbrille Arbeitsschutzbrille Klar Anti Beschlag Labor Chemie Löten Werkstatt Augenschutz EN166 Überbrille Brillenträger Unisex 2026 NEU Profi",
+    category: "werkzeug",
+    price: 24.9,
+    compareAt: 89.9,
+    description: [
+      "Von Herrn Trottmann freigegeben, nachdem er sie drei Wochen lang getragen hat. Auch in der Kaffeepause. Auch jetzt.",
+      "Pflicht in der Werkstatt, in Meetings und laut Herrn Trottmann auch beim Lesen dieser Produktbeschreibung.",
+    ],
+    callouts: ["ANTI BESCHLAG · NO FOG", "LABOR GEPRÜFT · CHEMIE OK", "PAUSE TAUGLICH · COFFEE SAFE"],
+    specs: [
+      { k: "Norm", v: "EN 166 (laut Verpackung)" },
+      { k: "Beschlag", v: "nur beim Kaffee" },
+      { k: "Passt über", v: "Brillen, Lupenbrillen und Zweifel" },
+      { k: "Freigabe", v: "Herr Trottmann" },
+    ],
+    ship: SZ,
+    team: "trottmann",
+    popularity: 63,
+    added: "2026-11-12",
+    reviews: [
+      { by: "Herr Trottmann", stars: 5, text: "Trage ich seit drei Wochen. Ich nehme sie nicht mehr ab." },
+      { by: "Cedric", stars: 5, text: "Seit ich sie trage, sehe ich meine Fehler früher. Verhindern kann ich sie noch nicht." },
+      { by: "Philippe", stars: 4, text: "Passt gut. Der Türrahmen leider immer noch nicht." },
+    ],
+    art: {
+      kind: "tool",
+      variant: "glasses",
+      colors: ["#c2410c", "#e6f4ff", "#ffe14d"],
+      label: "TROTTMANN",
+      sticker: { text: "EN 166|GEPRÜFT", shape: "seal" },
+      corner: "NEU",
+      size: "Einheitsgrösse",
+    },
+  },
+  {
+    slug: "feuerloescher-abschliessbar",
+    name: "Feuerlöscher, abschliessbar",
+    title:
+      "Feuerlöscher CO2 2kg Werkstatt Küche Auto Büro Brandschutz Notfall Löschgerät Wandhalterung Abschliessbar Sicherheit Profi Set Schlüssel Nicht Inbegriffen",
+    category: "werkzeug",
+    price: 89,
+    compareAt: 249,
+    description: [
+      "Der Feuerlöscher der Zolilöt AG, jetzt auch für zu Hause. Wird abgeschlossen geliefert. Den Schlüssel hat Herr Trottmann.",
+      "Im Brandfall bitte Herrn Trottmann kontaktieren. Er kommt, sobald die Lektion fertig ist.",
+    ],
+    callouts: ["CO₂ LÖSCHEN · FIRE STOP", "ABSCHLIESSBAR · VERY SAFE", "WANDHALTER · ON WALL"],
+    specs: [
+      { k: "Inhalt", v: "2 kg CO₂ (Titel), 100 ml (Etikett)" },
+      { k: "Schlüssel", v: "nicht inbegriffen, liegt bei Herrn Trottmann" },
+      { k: "Einsatzbereit", v: "nach Rücksprache" },
+      { k: "Geeignet für", v: "Brandklasse B und Maurices Folien" },
+    ],
+    ship: SZ,
+    team: "trottmann",
+    popularity: 41,
+    added: "2026-11-12",
+    reviews: [
+      { by: "Damon", stars: 4, text: "Musste ihn noch nie benutzen. Ich spreche ruhig mit dem Kolben." },
+      { by: "Cedric", stars: 3, text: "Hätte ihn letzte Woche gebraucht. Herr Trottmann war im Unterricht." },
+      { by: "Herr Trottmann", stars: 5, text: "Bleibt abgeschlossen. Das ist der Sinn der Sache." },
+    ],
+    art: {
+      kind: "bottle",
+      colors: ["#d62828", "#1d1f22", "#ffe14d"],
+      label: "CO₂ LÖSCHER",
+      sticker: { text: "2 KG|LAUT TITEL", shape: "burst" },
+      size: "100 ml",
+    },
+  },
+  {
+    slug: "sicherheitsdatenblatt-pdf",
+    name: "Sicherheitsdatenblatt Zolilöt AG (PDF)",
+    title:
+      "Sicherheitsdatenblatt SDB PDF Download 16 Abschnitte ChemV Konform Firma Gemisch Gefahrstoff Profi Vorlage Sofort Digital Original Signiert",
+    category: "digital",
+    price: 9.9,
+    compareAt: 49.9,
+    description: [
+      "Alle 16 Abschnitte, von Herrn Trottmann verfasst und von Frau Deubelbeiss lektoriert. Gratis lesbar unter /sicherheit. Hier kostet es 9.90.",
+      "Für den Preis bekommen Sie dasselbe Dokument, aber mit dem guten Gefühl, dafür bezahlt zu haben.",
+    ],
+    callouts: ["16 ABSCHNITTE · MANY PART", "SIGNIERT · REAL NAME", "SOFORT DOWNLOAD · FAST SAFE"],
+    specs: [
+      { k: "Seiten", v: "16 Abschnitte" },
+      { k: "Format", v: "PDF" },
+      { k: "Signalwort", v: "Achtung" },
+      { k: "Gratis-Version", v: "identisch" },
+    ],
+    ship: { from: "digital", min: 0, max: null, note: "per E-Mail, sobald Zoltán sich meldet" },
+    team: "trottmann",
+    popularity: 38,
+    added: "2026-11-12",
+    reviews: [
+      { by: "Joël", stars: 5, text: "Gelesen. Danach weitergelötet." },
+      { by: "Niklas", stars: 2, text: "Abschnitt 3 ist falsch. Was richtig wäre, sage ich nicht." },
+    ],
+    art: {
+      kind: "card",
+      variant: "ebook",
+      colors: ["#d62828", "#ffffff", "#ffe14d"],
+      label: "SICHERHEITS DATENBLATT",
+      sticker: { text: "PDF|SIGNIERT", shape: "seal" },
+      size: "16 Abschnitte",
     },
   },
 

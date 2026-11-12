@@ -35,7 +35,7 @@ export const press = {
 export const stats = [
   { value: 360, suffix: " °C", label: "Betriebstemperatur", note: "konstant, ausser wenn jemand am Kabel zieht" },
   { value: 0, suffix: "", label: "Kalte Lötstellen", note: "die wir zugeben" },
-  { value: 18, suffix: "", label: "Mitarbeitende", note: "davon 2 Besitzer und 1 CEO" },
+  { value: 19, suffix: "", label: "Mitarbeitende", note: "davon 2 Besitzer und 1 CEO" },
   { value: 24, suffix: "/7", label: "Erreichbar", note: "ausser während der Schule" },
 ];
 
@@ -101,7 +101,7 @@ export const about = {
   story: [
     "Zoltán hatte die Idee, den Namen und den Lötkolben. Dijar hatte alles andere: die Domain, den Server, das WLAN-Passwort und als Einziger Zugriff auf das Aktienregister.",
     "Das Aktienregister ist eine Excel-Datei auf Dijars Laptop. An einem Dienstagnachmittag hat er sie aktualisiert, seither besitzt er 49 %. Julius war zufällig im Raum, sagte «ich auch» und besitzt seither ebenfalls 49 %. Zoltán bekam den Rest.",
-    "Heute beschäftigt die Zolilöt AG achtzehn Mitarbeitende, vom Lehrling über den Chemiker bis zur Lehrerin. Gelötet wird hauptsächlich von Joël.",
+    "Heute beschäftigt die Zolilöt AG neunzehn Mitarbeitende, vom Lehrling über den Chemiker bis zu zwei Lehrpersonen. Gelötet wird hauptsächlich von Joël.",
   ],
   quote: "Ich bin der CEO. Das steht so im Handelsregister.",
   quoteBy: "Zoltán, CEO, 2 % Aktien",
@@ -147,7 +147,7 @@ export const team: {
 } = {
   eyebrow: "Team",
   title: "Die Köpfe hinter der Lötstelle.",
-  lead: "Achtzehn Personen, ein Labor, ein Erste-Hilfe-Team, ein Lötkolben und einer, der ihn zähmt. Jede Rolle ist besetzt, manche schon seit sechs Lehrjahren.",
+  lead: "Neunzehn Personen, ein Labor, ein Erste-Hilfe-Team, ein Sicherheitschef, ein Lötkolben und einer, der ihn zähmt. Jede Rolle ist besetzt, manche schon seit sechs Lehrjahren.",
   board: [
     {
       name: "Dijar",
@@ -194,6 +194,16 @@ export const team: {
       line: "Prüft jede Offerte und jede Folie von Maurice. Hat den Slogan «Wir machens möglich» dreimal rot angestrichen. Wir haben ihn trotzdem behalten. Sie hat Bedenken angemeldet.",
       bg: "#efdcd6",
       avatar: { hair: ["variant23"], body: ["variant15"], gesture: ["point"], glassesProbability: 0, beardProbability: 0 },
+    },
+    {
+      name: "Herr Trottmann",
+      role: "Chief Safety Officer, Gefahrstoffe & Brandschutz",
+      ring: "#SCHUTZBRILLE AUF",
+      ringColor: "#c2410c",
+      tag: "Einziger mit Schlüssel zum Feuerlöscher",
+      line: "Hat jede Lötstelle, jedes Meeting und alle Ideen von Zoltán mit einem Gefahrensymbol versehen. Stuft Flux Nº 7 als meldepflichtig ein. Trägt die Schutzbrille auch in der Kaffeepause. Aus Prinzip.",
+      bg: "#f4e3c4",
+      avatar: { hair: ["variant07"], body: ["variant05"], gesture: ["point"], glasses: ["variant03"], glassesProbability: 100, beardProbability: 0 },
     },
   ],
   staff: [
@@ -350,7 +360,7 @@ export const testimonials = {
 export const career = {
   eyebrow: "Karriere",
   title: "Werde Teil des Teams.",
-  lead: "Achtzehn Leute, zwei Besitzer, ein Lötkolben. Für Nummer neunzehn ist noch Platz.",
+  lead: "Neunzehn Leute, zwei Besitzer, ein Lötkolben und ein abgeschlossener Feuerlöscher. Für Nummer zwanzig ist noch Platz.",
   job: {
     title: "Lötlehrling (m/w/d) 100 %",
     meta: ["Aarau, Keller", "ab sofort", "unbefristet"],
@@ -401,12 +411,13 @@ export const footer = {
   privacy: "Wir speichern keine Daten. Wir vergessen auch sonst vieles.",
   it: "Website, Server und Aktienregister betrieben von Dijar (CTO, 49 %).",
   proofread: "Lektorat: Frau Deubelbeiss. Alle verbleibenden Fehler gehören Dijar.",
+  safety: { label: "Sicherheitsdatenblatt", href: "/sicherheit" },
   repo: { label: "Quellcode auf GitHub", href: "https://github.com/vatra-sh/zolilot" },
 };
 
 export const shop = {
   label: "Shop",
-  menuMeta: "47 Artikel · Lieferung 3 bis 6 Wochen",
+  menuMeta: "50 Artikel · Lieferung 3 bis 6 Wochen",
   announcements: [
     "Gratisversand ab CHF 0.05 mehr",
     "Lieferung in 3 bis 6 Wochen ab Shenzhen",
@@ -557,4 +568,170 @@ export const shop = {
     ago: (m: number) => `vor ${m} Min.`,
     dismiss: "Hinweis schliessen",
   },
+};
+
+// /sicherheit: the company's safety data sheet, by Herr Trottmann. Real SDS structure (16 sections).
+export type Pictogram = "flamme" | "achtung" | "gesundheit";
+
+export const sds: {
+  eyebrow: string;
+  title: string;
+  lead: string;
+  meta: string[];
+  signal: string;
+  hazards: { id: Pictogram; code: string; label: string; note: string }[];
+  sections: { title: string; items: { k: string; v: string }[] }[];
+  signoff: string;
+} = {
+  eyebrow: "Sicherheitsdatenblatt",
+  title: "Zolilöt AG",
+  lead: "Für die Firma als Ganzes. Erstellt von Herrn Trottmann, nachdem er die Werkstatt zum ersten Mal betreten hatte. Bitte vor dem ersten Besuch lesen. Die Schutzbrille gilt auch beim Lesen.",
+  meta: ["gemäss ChemV", "Version 1", "überarbeitet am 12.11.2026", "erstellt von Herrn Trottmann"],
+  signal: "Achtung",
+  hazards: [
+    { id: "flamme", code: "GHS02", label: "Damons Lötkolben", note: "entzündbar, auch gezähmt" },
+    { id: "achtung", code: "GHS07", label: "Zoltáns Ideen", note: "treten ohne Vorwarnung auf" },
+    { id: "gesundheit", code: "GHS08", label: "Flux Nº 7", note: "Zusammensetzung unbekannt" },
+  ],
+  sections: [
+    {
+      title: "Bezeichnung des Gemischs und des Unternehmens",
+      items: [
+        { k: "Handelsname", v: "Zolilöt AG" },
+        { k: "Verwendung", v: "Löten, Kabelkonfektion, Reparatur. Abgeraten wird von allem, was keinen Strom leitet. Wir versuchen es trotzdem." },
+        { k: "Hersteller", v: "Zoltán (2 %), Dijar (49 %), Julius (49 %, war gerade im Raum)" },
+        { k: "Notruf", v: "Violetta und Johanna, Erste-Hilfe-Team. Cedric kennt die Nummer auswendig." },
+      ],
+    },
+    {
+      title: "Mögliche Gefahren",
+      items: [
+        { k: "Einstufung", v: "Gemisch aus neunzehn Bestandteilen. Einzeln harmlos, gemeinsam in einem Keller nur bedingt." },
+        { k: "H360 °C", v: "Wird konstant bei 360 °C betrieben, ausser wenn jemand am Kabel zieht." },
+        { k: "H049 %", v: "Kann zu Aktienanteilen führen, wenn man sich im falschen Moment im Raum aufhält." },
+        { k: "P280", v: "Schutzbrille tragen. Auch in Meetings. Auch in der Kaffeepause." },
+        { k: "P-ZL1", v: "Lötkolben nie am heissen Ende anfassen. Im Zweifel Damon fragen." },
+      ],
+    },
+    {
+      title: "Zusammensetzung, Angaben zu Bestandteilen",
+      items: [
+        { k: "Joël", v: "100 % der Lötstellen" },
+        { k: "Lehrlinge", v: "2, davon einer im 6. Lehrjahr" },
+        { k: "Flux Nº 7", v: "Kolophonium 62 %, Geheimrezept 31 %, «Niklas weiss es» 7 %" },
+        { k: "Lehrpersonen", v: "2. Helfen, arbeiten nicht. Vertraglich so geregelt." },
+      ],
+    },
+    {
+      title: "Erste-Hilfe-Massnahmen",
+      items: [
+        { k: "Hautkontakt", v: "Mit dem heissen Ende: kaltes Wasser, dann Violetta oder Johanna. Eintrag ins Unfallbuch nicht vergessen." },
+        { k: "Einatmen", v: "Von Flux Nº 7: Fenster öffnen, Frischluft. Niklas nicht fragen, was drin ist. Er sagt es nicht." },
+        { k: "Verschlucken", v: "Von Lötzinn: nicht. Einfach nicht." },
+        { k: "Hinweis für den Arzt", v: "Der Patient heisst vermutlich Cedric." },
+      ],
+    },
+    {
+      title: "Massnahmen zur Brandbekämpfung",
+      items: [
+        { k: "Geeignete Löschmittel", v: "CO₂-Löscher, an der Wand neben der Tür. Abgeschlossen. Den Schlüssel hat Herr Trottmann." },
+        { k: "Ungeeignet", v: "Maurices Folien. Alle orange, wirken eher anfeuernd." },
+        { k: "Schutzausrüstung", v: "Damon. Er nähert sich langsam und spricht ruhig." },
+      ],
+    },
+    {
+      title: "Massnahmen bei unbeabsichtigter Freisetzung",
+      items: [
+        { k: "Lötzinn", v: "Abkühlen lassen. Joël fragen, ob er ihn noch braucht. Er braucht ihn noch." },
+        { k: "Aktienregister", v: "Bei Freisetzung bitte sofort Dijar informieren. Er weiss es bereits." },
+      ],
+    },
+    {
+      title: "Handhabung und Lagerung",
+      items: [
+        { k: "Lötkolben", v: "In der Ablage lagern, nicht in Cedrics Hand." },
+        { k: "Flux Nº 7", v: "Kühl, trocken und mit Abstand zu allen Nasen." },
+        { k: "Philippe", v: "Nicht unter Türrahmen lagern (205 cm)." },
+        { k: "Lagerort", v: "Keller Aarau" },
+      ],
+    },
+    {
+      title: "Begrenzung und Überwachung der Exposition, persönliche Schutzausrüstung",
+      items: [
+        { k: "Augenschutz", v: "Schutzbrille, Pflicht. Herr Trottmann prüft das auch beim Mittagessen." },
+        { k: "Handschutz", v: "Hitzeschutzhandschuhe bis 800 °C. Das Feingefühl endet bei etwa 20 °C." },
+        { k: "Atemschutz", v: "Lötrauch-Absauger. Verteilt den Rauch gleichmässig im Raum." },
+        { k: "Grenzwert", v: "Ideen des CEO pro Meeting: 3. Gemessen: 11." },
+      ],
+    },
+    {
+      title: "Physikalische und chemische Eigenschaften",
+      items: [
+        { k: "Aggregatzustand", v: "Fest. Beim Löten flüssig. Danach wieder fest, meistens an der richtigen Stelle." },
+        { k: "Schmelzpunkt", v: "Lötzinn Sn63Pb37: 183 °C. Von Herrn Trottmann nachgemessen und bestätigt. Als einzige Angabe auf dieser Website." },
+        { k: "Geruch", v: "Flux Nº 7. Unverkennbar." },
+        { k: "pH-Wert der Stimmung", v: "7, montags 4" },
+        { k: "Siedepunkt", v: "Philippe: unbekannt, wurde noch nie erreicht." },
+      ],
+    },
+    {
+      title: "Stabilität und Reaktivität",
+      items: [
+        { k: "Stabilität", v: "Stabil bei Raumtemperatur, solange Linus nichts verkauft." },
+        { k: "Zu vermeiden", v: "Montagmorgen, Prüfungswochen, Kabel, an denen jemand zieht." },
+        { k: "Unverträglich", v: "Lötkolben und Cedric" },
+        { k: "Zersetzungsprodukte", v: "Kalte Lötstellen. Offiziell 0, die wir zugeben." },
+      ],
+    },
+    {
+      title: "Toxikologische Angaben",
+      items: [
+        { k: "Akute Toxizität", v: "Flux Nº 7: nicht bestimmt. Niklas verweigert die Probe." },
+        { k: "Reizwirkung", v: "Maurices LinkedIn-Beiträge, ab dem dritten am Tag" },
+        { k: "Sensibilisierung", v: "Wer einmal 49 % hatte, will nicht mehr zurück." },
+        { k: "Langzeitwirkung", v: "Die Lehre kann sich verlängern. Siehe Philippe." },
+      ],
+    },
+    {
+      title: "Umweltbezogene Angaben",
+      items: [
+        { k: "Persistenz", v: "Hoch. Philippe ist im 6. Lehrjahr." },
+        { k: "Bioakkumulation", v: "Aktien reichern sich bei Dijar und Julius an." },
+        { k: "Mobilität", v: "Linus, Aussendienst" },
+      ],
+    },
+    {
+      title: "Hinweise zur Entsorgung",
+      items: [
+        { k: "Lötzinnreste", v: "Sammeln, nicht essen." },
+        { k: "Kaputte Ladekabel", v: "An uns zurück. Wir löten sie nach, danach sind es zwei." },
+        { k: "Ideen des CEO", v: "Werden demokratisch entsorgt." },
+      ],
+    },
+    {
+      title: "Angaben zum Transport",
+      items: [
+        { k: "UN-Nummer", v: "beantragt" },
+        { k: "Transportweg", v: "Shenzhen bis Keller Aarau, 3 bis 6 Wochen" },
+        { k: "Verpackungsgruppe", v: "III. Orange, von Maurice gestaltet." },
+      ],
+    },
+    {
+      title: "Rechtsvorschriften",
+      items: [
+        { k: "Chemikalienverordnung", v: "Von Herrn Trottmann Abschnitt für Abschnitt geprüft. Wir haben genickt." },
+        { k: "Arbeitsvertrag", v: "Lehrpersonen helfen, sie arbeiten nicht." },
+        { k: "Aktienregister", v: "Eine Excel-Datei auf Dijars Laptop. Rechtlich in Abklärung." },
+      ],
+    },
+    {
+      title: "Sonstige Angaben",
+      items: [
+        { k: "Änderungen", v: "Erste Version. Es gab keine Vorversion. Es gab auch keine Sicherheit." },
+        { k: "Lektorat", v: "Frau Deubelbeiss. Zwei Kommas ergänzt, ein Gefahrensymbol rot angestrichen." },
+        { k: "Gelesen von", v: "Joël. Er hat danach weitergelötet." },
+      ],
+    },
+  ],
+  signoff: "Herr Trottmann, Chief Safety Officer, Gefahrstoffe & Brandschutz",
 };

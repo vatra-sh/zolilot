@@ -1,7 +1,7 @@
 import { productBySlug, products, views, type View } from "@/catalogue";
 import { renderArt } from "@/shop/art";
 
-// 47 products × 4 views, all rendered at build time; unknown paths get a 404.
+// 50 products × 4 views, all rendered at build time; unknown paths get a 404.
 export function generateStaticParams() {
   return products.flatMap((p) => views.map((v) => ({ slug: p.slug, ansicht: `${v}.svg` })));
 }

@@ -396,7 +396,7 @@ const tool: Draw = (a) => {
         <path d="M-90 0 a30 30 0 0 1 22 -16 M42 0 a30 30 0 0 1 22 -16" stroke="#fff" stroke-width="6" fill="none" stroke-linecap="round"/>
         <circle cx="0" cy="-58" r="18" fill="${c2}"/>
         ${[-60, -30, 0, 30, 60].map((d) => `<path d="M0 -58 l${Math.sin((d * Math.PI) / 180) * 50} ${-Math.cos((d * Math.PI) / 180) * 50}" stroke="${c2}" stroke-width="5" stroke-linecap="round" opacity=".7"/>`).join("")}
-        ${text(0, 100, "25X", 22, c0)}`;
+        ${text(0, 100, a.label ?? "25X", 22, c0)}`;
     case "fan":
       return `<rect x="-140" y="-150" width="280" height="290" rx="18" fill="${c0}"/>
         <circle cx="0" cy="-10" r="110" fill="#1d1f22"/>

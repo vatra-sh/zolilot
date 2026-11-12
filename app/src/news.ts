@@ -2,7 +2,8 @@
 
 export type Block =
   | { type: "p"; text: string }
-  | { type: "facts"; items: { k: string; v: string }[] };
+  | { type: "facts"; items: { k: string; v: string }[] }
+  | { type: "link"; href: string; label: string };
 
 export type Post = {
   slug: string;
@@ -20,6 +21,38 @@ export const newsPage = {
 };
 
 export const posts: Post[] = [
+  {
+    slug: "herr-trottmann-sicherheit",
+    date: "2026-11-12",
+    category: "Personal",
+    title: "Herr Trottmann übernimmt die Sicherheit",
+    excerpt: "Die Zolilöt AG hat zum ersten Mal einen Sicherheitschef. Seine erste Amtshandlung: ein Sicherheitsdatenblatt für die ganze Firma.",
+    body: [
+      {
+        type: "p",
+        text: "Die Zolilöt AG begrüsst Herrn Trottmann als Chief Safety Officer für Gefahrstoffe und Brandschutz. Als Chemielehrer weiss er, was passiert, wenn man Dinge mischt, die man nicht mischen sollte. Bei uns ist das der Normalfall.",
+      },
+      {
+        type: "p",
+        text: "Wie Frau Deubelbeiss gehört er zu den angestellten Lehrpersonen: Er hilft, er arbeitet nicht. Das ist vertraglich so geregelt. Den Schlüssel zum Feuerlöscher hat er trotzdem als Einziger.",
+      },
+      {
+        type: "facts",
+        items: [
+          { k: "Tage ohne Lötunfall", v: "0. Der Rekord liegt bei einem Tag. Dann kam Cedric." },
+          { k: "Flux Nº 7", v: "Als Gefahrstoff eingestuft. Niklas hat Einsprache erhoben. Herr Trottmann hat sie verdünnt." },
+          { k: "Evakuationsübung", v: "Alle in 40 Sekunden draussen. Philippe nach 4 Minuten, er hing im Türrahmen." },
+          { k: "Lötkolben-Ausweis", v: "Damon hat als Einziger Kategorie A. Cedric fährt mit Lernfahrausweis und Begleitperson." },
+          { k: "Frauenquote", v: "Von 28 % auf 26 %. Aisha hat nachgerechnet. Marwin verbucht es diesmal nicht als persönlichen Erfolg." },
+        ],
+      },
+      {
+        type: "p",
+        text: "Erste Amtshandlung: ein Sicherheitsdatenblatt für die gesamte Firma, in 16 Abschnitten, wie es sich gehört. Die Zolilöt AG ist darin als Gemisch eingestuft, Signalwort «Achtung». Frau Deubelbeiss hat es lektoriert. Joël hat es gelesen und weitergelötet.",
+      },
+      { type: "link", href: "/sicherheit", label: "Zum Sicherheitsdatenblatt" },
+    ],
+  },
   {
     slug: "frauenquote-28-prozent",
     date: "2026-11-06",

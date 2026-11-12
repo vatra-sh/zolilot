@@ -52,7 +52,13 @@ function SolderStatus() {
           </span>
           Lötkolben betriebsbereit · <span className="tabular-nums text-paper">{temp} °C</span>
         </p>
-        <p className="hidden sm:block">Aarau · Mo bis Fr nach der Schule</p>
+        <p className="hidden items-center gap-2 sm:flex">
+          <a href="/sicherheit" className="transition-colors duration-300 hover:text-paper">
+            Tage ohne Lötunfall · <span className="tabular-nums text-paper">0</span>
+          </a>
+          <span aria-hidden>·</span>
+          Aarau · Mo bis Fr nach der Schule
+        </p>
       </div>
     </div>
   );

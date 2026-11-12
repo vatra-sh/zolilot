@@ -38,6 +38,11 @@ export function Footer() {
           <div className="md:col-span-4">
             <p className="font-medium text-[11px] uppercase tracking-[0.14em] text-steel">Rechtliches</p>
             <ul className="mt-4 space-y-2">
+              <li>
+                <a href={footer.safety.href} className="text-sm text-graphite/80 transition-colors duration-300 hover:text-graphite">
+                  {footer.safety.label}
+                </a>
+              </li>
               {footer.links.map((l) => (
                 <li key={l} className="text-sm text-graphite/80">
                   {l}
